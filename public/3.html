@@ -22,8 +22,11 @@ function msgbox()
 		for(var i=0;i<data.length;i++)
 		{
 			$("<p class='dm' style='position:absolute; top:20px; left:80%;'></p>").insertBefore("#qy").text(data[i].text).attr("id",i);
-			$("#"+i).animate({top:'+='+i*20+'px'},0,'linear');
-			$("#"+i).animate({left:'-10000px'},80000,'linear');
+			$("#"+i).animate({top:'+='+i*20+'px'},0,'linear', function() {
+			});
+			$("#"+i).animate({left:'-100px'},800,'linear', function() {
+				$(this).remove();
+			});
 			timeLow = Math.max(timeLow, data[i].time);
 		}
 	});
