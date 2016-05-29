@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
 
-module.exports = new mongoose.Schema({
+var schema = new mongoose.Schema({
 	roundId: String,
 });
+
+module.exports = mongoose.model('round', schema);

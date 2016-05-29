@@ -1,7 +1,10 @@
 var mongoose = require("mongoose");
 
-module.exports = new mongoose.Schema({
-	barrageId: String,
+var schema = new mongoose.Schema({
+	roundId: String,
+	barrId: String,
 	text: String,
 	time: Number,
 });
+
+module.exports = mongoose.model('barrage', schema);

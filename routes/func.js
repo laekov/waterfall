@@ -1,29 +1,47 @@
 var express = require("express");
+var Barr = require('../modules/db/barrage');
+var toolkit = require('../modules/toolkit');
 var router = express();
 
-var curText = new Array();
-
 router.post("/send", function(req, res) {
-	var curDate = (new Date()).getTime();
-	curText.push({ 
+	var barrData = {
+		barrId: toolkit.md5sum(Date.now() + req.body.text),
+		roundId: req.body.roundId ? req.body.roundId : 'defaultRound',
 		text: req.body.text,
-		time: curDate
-	});
-	console.log("Received: " + req.body.text);
-	res.send({ error: 0, time: curDate });
+		time: Date.now()
+	};
+	if (barrData.text.length < 2 || barrData.text.length > 30) {
+		res.send({ error: 403, message: 'Invalid text'});
+	}
+	else {
+		//console.log("Received: " + req.body.text);
+		var barr = new Barr(barrData);
+		barr.save(function(err) {
+			res.send({ error: err, time: barrData.time });
+		});
+	}
 });
 
 router.post("/get", function(req, res) {
 	var data = new Array();
-	var curDate = (new Date()).getTime();
+	var curDate = Date.now();
 	var timeLow = Math.floor(curDate / 1000) * 1000;
-	if (req.body.timeLow) {
+	if (req.body.timeLow && req.body.timeLow > 0) {
 		timeLow = Number(req.body.timeLow);
 	}
-	for (var i = curText.length - 1; i >= 0 && curText[i].time > timeLow; -- i) {
-		data.push(curText[i]);
-	}
-	res.send({data: data});
+	var findPattern = {
+		time: { $gt: timeLow },
+		roundId: req.body.roundId ? req.body.roundId : 'defaultRound'
+	};
+
+	Barr.find(findPattern, function(err, doc) {
+		if (err) {
+			res.send({error: err});
+		}
+		else {
+			res.send({ data: doc });
+		}
+	});
 });
 
 module.exports = router;
