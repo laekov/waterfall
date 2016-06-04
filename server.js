@@ -3,6 +3,7 @@
 var app = require("./app");
 
 var serverOptions = {
+	//ipaddress: "localhost",
 	ipaddress: "laekov.com.cn",
 	port: 2334,
 	dburl: "mongodb://127.0.0.1/waterfall"

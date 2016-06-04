@@ -11,7 +11,7 @@ function clickk()
 {
 	c=c+1;
 	var curText = $("#curText").val();
-	$.post("/func/send",{text: curText,owner: rm});
+	$.post("/func/send",{roundId: 'test', text: curText,owner: rm});
 	//$("<p class='dm' style='position:absolute; top:20px; left:80%;'></p>").insertBefore("#qy").text(curText).attr("id",c);
 	//$("#"+c).animate({top:'+='+c*20+'px'},0,'linear');
 	//$("#"+c).animate({left:'-10000px'},80000,'linear');
@@ -24,7 +24,7 @@ function rd()
 function msgbox()
 {
 
-	$.post("/func/get",{timeLow: timeLow},function(res){
+	$.post("/func/get",{roundId: 'test', timeLow: timeLow},function(res){
 		var data = res.data;
 		for(var i=0;i<data.length;i++)
 		{

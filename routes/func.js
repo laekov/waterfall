@@ -10,7 +10,10 @@ function cleanBarr() {
 	var cTime = Date.now();
 	if (cTime > nLastClean + nSaveTime) {
 		nLastClean = cTime;
-		Barr.remove({ $lt: { time: cTime - nSaveTime } }, function(err) {
+		Barr.remove({ time: { $lt: cTime - nSaveTime } }, function(err) {
+			if (err) {
+				console.log(err);
+			}
 		});
 	}
 }
