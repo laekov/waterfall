@@ -3,7 +3,22 @@ var Barr = require('../modules/db/barrage');
 var toolkit = require('../modules/toolkit');
 var router = express();
 
+var nSaveTime = 10000;
+var nLastClean = 0;
+
+function cleanBarr() {
+	var cTime = Date.now();
+	if (cTime > nLastClean + nSaveTime) {
+		nLastClean = cTime;
+		Barr.remove({ $lt: { time: cTime - nSaveTime } }, function(err) {
+		});
+	}
+}
+
+cleanBarr();
+
 router.post("/send", function(req, res) {
+	cleanBarr();
 	var barrData = {
 		barrId: toolkit.md5sum(Date.now() + req.body.text),
 		roundId: req.body.roundId ? req.body.roundId : 'defaultRound',
@@ -24,6 +39,7 @@ router.post("/send", function(req, res) {
 });
 
 router.post("/get", function(req, res) {
+	cleanBarr();
 	var data = new Array();
 	var curDate = Date.now();
 	var timeLow = Math.floor(curDate / 1000) * 1000;
