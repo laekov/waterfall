@@ -8,9 +8,10 @@ router.post("/send", function(req, res) {
 		barrId: toolkit.md5sum(Date.now() + req.body.text),
 		roundId: req.body.roundId ? req.body.roundId : 'defaultRound',
 		text: req.body.text,
+		owner: req.body.owner,
 		time: Date.now()
 	};
-	if (barrData.text.length < 2 || barrData.text.length > 30) {
+	if (barrData.text.length < 2 || barrData.text.length > 64) {
 		res.send({ error: 403, message: 'Invalid text'});
 	}
 	else {
