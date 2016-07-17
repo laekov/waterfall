@@ -3,7 +3,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<script src='http://laekov.com.cn/entrances/javascripts/cdn/jquery_min.js'></script>
 		<script>
-var localRoundId = "qbxt201607_mhy";
+var localRoundId = "qbxt201607_hja";
 		</script>
 		<script src='http://laekov.com.cn:2334/barr_client.js'></script>
 		<style>
@@ -11,7 +11,14 @@ body {
 	font-size: 14pt;
 }
 		</style>
-		<title>mhy最帅啦</title>
+		<title>课堂反馈</title>
+		<script>
+$(document).ready(function() { 
+	$("#hidepost").click(function() {
+		$("#postdiv").hide();
+	});
+});
+		</script>
 	</head>
 
 	<body>
@@ -26,7 +33,7 @@ body {
 			</div>
 		</div>
 
-		<div id='warn'>求不刷炸qaq</div>
+		<div>请不要虐待服务姬</div>
 		<div id='postdiv'>
 			<label>Your name: </label>
 			<input id='owner' type='text' style='width:10em' />
@@ -34,6 +41,7 @@ body {
 			<input id='text' type='text' style='width:40em' />
 			<button id='submitbarr'>Shoot</button>
 			<span style='color: red;' id='errorinfo'></span>
+			<span id='hidepost'>-</span>
 		</div>
 
 		<div id='listmain'>
