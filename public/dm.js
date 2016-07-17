@@ -1,5 +1,3 @@
-var localRoundId = "qbxt201607";
-
 var timeLow = 1;
 
 function showErr(word) {
@@ -24,8 +22,9 @@ function submitBarr() {
 	$.post("/func/send", data, function(res) {
 		if (res.error) {
 			showErr(res.message);
+		} else {
+			showErr("Sent");
 		}
-		showErr("Sent");
 		$("#text").val("");
 	});
 	return 0;
@@ -33,6 +32,7 @@ function submitBarr() {
 
 var eleList = [];
 var eleHead = 0;
+var sessionIdList = {};
 const maxEle = 512;
 
 function updateList() {
@@ -41,6 +41,7 @@ function updateList() {
 			showErr(res.error);
 		} else {
 			for (var i in res.data) {
+				sessionIdList[res.data[i].barrId] = res.data[i].sessionId;
 				var newEle = $("#sampleitem").clone();
 				newEle.attr("id", res.data[i].barrId);
 				newEle.find("#name").html(res.data[i].owner);
@@ -54,12 +55,12 @@ function updateList() {
 				}
 			}
 		}
-		setTimeout("updateList()", 300);
 	});
 	while (eleList.length - eleHead > maxEle) {
 		eleList[eleHead].remove();
 		++ eleHead;
 	}
+	setTimeout("updateList()", 300);
 }
 
 $(document).ready(function() {

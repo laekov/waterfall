@@ -1,5 +1,6 @@
 var express = require("express");
 var Barr = require('../modules/db/barrage');
+var Ban = require('../modules/db/ban');
 var toolkit = require('../modules/toolkit');
 var router = express();
 
@@ -20,25 +21,43 @@ function cleanBarr() {
 
 cleanBarr();
 
+function checkString(x) {
+	while (x.match("<")) {
+		x = x.replace("<", "&lt;");
+	}
+	return x;
+}
+
 router.post("/send", function(req, res) {
 	cleanBarr();
+	var sessionId = req.sessionID;
 	var barrData = {
 		barrId: toolkit.md5sum(Date.now() + req.body.text),
 		roundId: req.body.roundId ? req.body.roundId : 'defaultRound',
-		text: req.body.text,
-		owner: req.body.owner,
+		sessionId: sessionId,
+		text: checkString(req.body.text),
+		owner: checkString(req.body.owner),
 		time: Date.now()
 	};
-	if (barrData.text.length < 2 || barrData.text.length > 64) {
-		res.send({ error: 403, message: 'Invalid text'});
-	}
-	else {
-		//console.log("Received: " + req.body.text);
-		var barr = new Barr(barrData);
-		barr.save(function(err) {
-			res.send({ error: err, time: barrData.time });
-		});
-	}
+	var banPattern = {
+		$or: [ { sessionId: sessionId }, { owner: barrData.owner } ],
+	};
+	Ban.find(banPattern, function(err, doc) {
+		if (doc.length) {
+			res.send({ error: 403, message: "You are not allowed to speak" });
+		} else {
+			if (barrData.text.length < 2 || barrData.text.length > 64) {
+				res.send({ error: 403, message: 'Invalid text'});
+			}
+			else {
+				//console.log("Received: " + req.body.text);
+				var barr = new Barr(barrData);
+				barr.save(function(err) {
+					res.send({ error: err, time: barrData.time });
+				});
+			}
+		}
+	});
 });
 
 router.post("/get", function(req, res) {
@@ -53,15 +72,40 @@ router.post("/get", function(req, res) {
 		time: { $gt: timeLow },
 		roundId: req.body.roundId ? req.body.roundId : 'defaultRound'
 	};
-
 	Barr.find(findPattern, function(err, doc) {
 		if (err) {
 			res.send({error: err});
-		}
-		else {
+		} else {
 			res.send({ data: doc });
 		}
 	});
+});
+
+var adminKey = 'mhymhy';
+router.post("/addBan", function(req, res) {
+	var key = req.body.adminKey;
+	if (key != adminKey) {
+		res.send({ error: 403, message: "wrong key" });
+	} else {
+		if (req.body.sessionId || req.body.owner) {
+			var data = { 
+				owner: req.body.owner, 
+				sessionId: req.body.sessionId,
+			};
+			if (!data.owner) {
+				data.owner = "unknown";
+			}
+			if (!data.sessionId) {
+				data.sessionId = "unknown";
+			}
+			var ban = new Ban(data);
+			ban.save(function(err) {
+				res.send({ error: err });
+			});
+		} else {
+			res.send({ error: 404, message: "illegal data" });
+		}
+	}
 });
 
 module.exports = router;
