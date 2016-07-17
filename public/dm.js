@@ -26,9 +26,14 @@ function submitBarr() {
 			showErr(res.message);
 		}
 		showErr("Sent");
+		$("#text").val("");
 	});
 	return 0;
 }
+
+var eleList = [];
+var eleHead = 0;
+const maxEle = 512;
 
 function updateList() {
 	$.post("/func/get", { roundId: localRoundId, timeLow: timeLow }, function(res) {
@@ -43,6 +48,7 @@ function updateList() {
 				var brDate = new Date(res.data[i].time);
 				newEle.find("#time").html(brDate.toLocaleString());
 				$("#listmain").prepend(newEle);
+				eleList.push(newEle);
 				if (res.data[i].time > timeLow) {
 					timeLow = res.data[i].time;
 				}
@@ -50,6 +56,10 @@ function updateList() {
 		}
 		setTimeout("updateList()", 300);
 	});
+	while (eleList.length - eleHead > maxEle) {
+		eleList[eleHead].remove();
+		++ eleHead;
+	}
 }
 
 $(document).ready(function() {
