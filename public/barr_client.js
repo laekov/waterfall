@@ -11,6 +11,7 @@ function submitBarr() {
 		text: $("#text").val(),
 		owner: $("#owner").val()
 	};
+	$("#text").val("");
 	if (data.text.length < 3 || data.text.length > 100) {
 		showErr("Illegal text");
 		return -1;
@@ -25,7 +26,6 @@ function submitBarr() {
 		} else {
 			showErr("Sent");
 		}
-		$("#text").val("");
 	});
 	return 0;
 }
@@ -35,12 +35,17 @@ var eleHead = 0;
 var sessionIdList = {};
 const maxEle = 512;
 
+function randInt(x) {
+	return Math.floor(Math.random() * x);
+}
+
 function updateList() {
 	$.post("/func/get", { roundId: localRoundId, timeLow: timeLow }, function(res) {
 		if (res.error) {
 			showErr(res.error);
 		} else {
 			for (var i in res.data) {
+				if (sessionIdList[res.data[i].barrId] != undefined) continue;
 				sessionIdList[res.data[i].barrId] = res.data[i].sessionId;
 				var newEle = $("#sampleitem").clone();
 				newEle.attr("id", res.data[i].barrId);
@@ -48,6 +53,7 @@ function updateList() {
 				newEle.find("#content").html(res.data[i].text);
 				var brDate = new Date(res.data[i].time);
 				newEle.find("#time").html(brDate.toLocaleString());
+				newEle.addClass("bg" + randInt(5));
 				$("#listmain").prepend(newEle);
 				eleList.push(newEle);
 				if (res.data[i].time > timeLow) {

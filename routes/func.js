@@ -81,7 +81,7 @@ router.post("/get", function(req, res) {
 	});
 });
 
-var adminKey = 'mhymhy';
+var adminKey = 'zhzhxxx';
 router.post("/addBan", function(req, res) {
 	var key = req.body.adminKey;
 	if (key != adminKey) {
