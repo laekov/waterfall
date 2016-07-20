@@ -61,12 +61,12 @@ function updateList() {
 				}
 			}
 		}
+		setTimeout("updateList()", 300);
 	});
 	while (eleList.length - eleHead > maxEle) {
 		eleList[eleHead].remove();
 		++ eleHead;
 	}
-	setTimeout("updateList()", 300);
 }
 
 $(document).ready(function() {
