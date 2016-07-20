@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 		<!---<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"> </script>-->
@@ -6,37 +7,27 @@
 var c=0;
 var timeLow = 0;
 var aid=10000;
-var rm=Math.random();
 function clickk()
 {
 	c=c+1;
 	var curText = $("#curText").val();
-	$.post("/func/send",{roundId: 'test', text: curText,owner: rm});
+	$.post("/func/send",{text: curText});
 	//$("<p class='dm' style='position:absolute; top:20px; left:80%;'></p>").insertBefore("#qy").text(curText).attr("id",c);
 	//$("#"+c).animate({top:'+='+c*20+'px'},0,'linear');
 	//$("#"+c).animate({left:'-10000px'},80000,'linear');
 }
-function rd()
-{
-	$("#curText").val("readyToShoot!!!!!");
-	msgbox();
-}
 function msgbox()
 {
 
-	$.post("/func/get",{roundId: 'test', timeLow: timeLow},function(res){
+	$.post("/func/get",{timeLow: timeLow},function(res){
 		var data = res.data;
 		for(var i=0;i<data.length;i++)
 		{
 			aid=aid+1;
-			$("<p class='dm' style='position:absolute; top:200px; left:100%;font-size:45px;white-space:nowrap'></p>").insertBefore("#qy").text(data[i].text).attr("id",aid);
-			if (data[i].owner==rm)
-			{
-			$("#"+aid).css("border","2px solid red");
-			}
-			$("#"+aid).animate({top:'+='+i*65+'px'},0,'linear', function() {
-			})
-			$("#"+aid).animate({left:'-1000px'},8000,'linear', function() {
+			$("<p class='dm' style='position:absolute; top:20px; left:80%;'></p>").insertBefore("#qy").text(data[i].text).attr("id",aid);
+			$("#"+aid).animate({top:'+='+i*20+'px'},0,'linear', function() {
+			});
+			$("#"+aid).animate({left:'-100px'},8000,'linear', function() {
 				$(this).remove();
 			});
 			timeLow = Math.max(timeLow, data[i].time);
@@ -44,16 +35,16 @@ function msgbox()
 	});
 	setTimeout("msgbox()",1000);
 }
-$(document).ready(rd());
+$(document).ready(msgbox());
 		</script>
 	</head>
 	<body>
 		<form>
-			<input type=text id="curText" style="width:60%;height:100px;font-size:45px" maxlength="64"/>
-			<input type="button" value="Shoot" style="height:100px;font-size:45px" onClick="clickk()">
+			<input type=text id="curText" style="width:60%" maxlength="100">
+			<input type="button" value="Shoot" onClick="clickk()">
 		</form>
 		</br>
-		<div style="position:absolute; top:50px; left:100%;width:20px; height:80%; background:#66CCFF;" id="qy"></div>
+		<div style="position:absolute; top:20px; left:80%; width:10px; height:80%; background:#000000;" id="qy"></div>
 		<div style='position:absolute; top:9999px;'>
 			<a href="http://http://www.miitbeian.gov.cn/" class="prcrecordhref"> 蜀ICP备15008072号				</a>
 	</div>

@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<script src='http://laekov.com.cn/entrances/javascripts/cdn/jquery_min.js'></script>
+		<script>
+var localRoundId = "qbxt201607_hja";
+		</script>
+		<script src='http://laekov.com.cn:2334/barr_client.js'></script>
+		<style>
+body {
+	font-size: 14pt;
+}
+		</style>
+		<title>&gt;_&lt;</title>
+		<script>
+$(document).ready(function() { 
+	$("#hidepost").click(function() {
+		$("#postdiv").hide();
+	});
+});
+		</script>
+		<style>
+.bg0 { background: #ccf; }
+.bg1 { background: #fcc; }
+.bg2 { background: #fcf; }
+.bg3 { background: #cff; }
+.bg4 { background: #cfc; }
+		</style>
+	</head>
+
+	<body>
+		<div style='display: none;'> 
+			<div id='sampleitem'>
+				<div>
+					<span id='name' style='color:blue;'></span>
+					<span id='time' style='color:grey;'></span>
+				</div>
+				<div id='content' style=''></div>
+			</div>
+		</div>
+
+		<div>随便炸</div>
+		<div id='postdiv'>
+			<label>Your name: </label>
+			<input id='owner' type='text' style='width:10em' />
+			<label>Your comment: </label>
+			<input id='text' type='text' style='width:40em' />
+			<button id='submitbarr'>Shoot</button>
+			<span style='color: red;' id='errorinfo'></span>
+			<span id='hidepost'>-</span>
+		</div>
+
+		<div id='listmain'>
+		</div>
+
+		<div style='position:absolute; top:9999px;'>
+			<a href="http://http://www.miitbeian.gov.cn/" class="prcrecordhref"> 蜀ICP备15008072号 </a>
+		</div>
+	</body>
+
+</html>
