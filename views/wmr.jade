@@ -1,0 +1,32 @@
+head
+	title= "Where are my roomates"
+	meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+	script(src="/javascripts/jquery_min.js")
+	script(src="/javascripts/jquery.md5.js")
+	script(src="/javascripts/wmr.js")
+	link(rel='stylesheet' href='/form.css')
+	link(rel='stylesheet' href='/colors.css')
+body
+	div.hidden
+		div#sampleBarr
+			div#text
+			div#time
+	div.divform
+		div.divitem
+			label.labelmonomed Building No.
+			input#buildingId.textnormal(type='text')
+			label (6 for example)
+		div.divitem
+			label.labelmonomed Room No.
+			input#roomId.textnormal(type='text')
+			label (233a for example)
+		div.divitem
+			button#search.buttonlightgreen Search
+		div.divitem
+			span#status
+	div#postdiv.divform.hidden
+		div.divitem
+			input#posttext.textlong(type='text')
+			button#post.buttonblue Post
+	div#contentList.divform
+

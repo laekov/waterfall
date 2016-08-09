@@ -1,0 +1,105 @@
+div.divform {
+	width: 768px;
+}
+div.formitem {
+	margin-bottom: 16px;
+}
+
+input.textnormal {
+	width: 16em;
+}
+input.textlong {
+	width: 32em;
+}
+input.texterror {
+	background: #f99;
+}
+label.labelmonomed {
+	display: inline-block;
+	width: 12em;
+}
+
+button.buttonsmall {
+	padding: 4px;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+}
+button.buttonsmall:hover {
+	cursor: pointer;
+}
+button.buttonnormal {
+	padding: 8px;
+	border: 1px solid #aaa;
+	border-radius: 3px;
+	font-size: 16px;
+}
+button.buttonnormal:hover {
+	cursor: pointer;
+}
+
+button.buttongreen {
+	color: #fff;
+	background-color: #090;
+}
+button.buttongreen:hover {
+	background-color: #0c0;
+}
+button.buttonlightgreen {
+	color: #333;
+	background-color: #afa;
+}
+button.buttonlightgreen:hover {
+	background-color: #cfc;
+}
+
+button.buttonred {
+	color: #fff;
+	background-color: #900;
+}
+button.buttonred:hover {
+	background-color: #c00;
+}
+button.buttonlightred {
+	color: #333;
+	background-color: #faa;
+}
+button.buttonlightred:hover {
+	background-color: #fcc;
+}
+
+button.buttonblue {
+	color: #fff;
+	background-color: #009;
+}
+button.buttonblue:hover {
+	background-color: #00c;
+}
+
+.monobig {
+	display: inline-block;
+	width: 32em;
+}
+.monosmall {
+	display: inline-block;
+	width: 8em;
+}
+
+div.formtitle {
+	font-size: 32px;
+	font-weight: 700;
+	border-bottom: 1px solid;
+}
+
+textarea {
+	padding: 0;
+	margin: 0;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+img.iconimg {
+	width: 32px;
+	height: 32px;
+}
+.hidden {
+	display: none;
+}

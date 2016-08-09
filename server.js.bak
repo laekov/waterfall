@@ -12,7 +12,7 @@ if (process.env.OPENSHIFT_NODEJS_IP) {
 	serverOptions = {
 		ipaddress: process.env.OPENSHIFT_NODEJS_IP,
 		port: process.env.OPENSHIFT_NODEJS_PORT || 8080,
-		dburl: process.env.OPENSHIFT_MONGODB_DB_URL + 'dm'
+		dburl: process.env.OPENSHIFT_MONGODB_DB_URL + 'waterfall'
 	};
 }
 
