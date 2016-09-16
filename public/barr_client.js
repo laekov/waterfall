@@ -77,4 +77,7 @@ $(document).ready(function() {
 		}
 	});
 	updateList();
+	$("#hidepost").click(function() {
+		$("#postdiv").hide();
+	});
 });
