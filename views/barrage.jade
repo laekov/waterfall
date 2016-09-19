@@ -1,0 +1,26 @@
+extends layout
+
+append head
+	script(src='/javascripts/barr_client.js')
+	script var localRoundId = "#{roundId}";
+	if (needUpdate)
+		script var needRefresh = 1;
+	else
+		script var needRefresh = false;
+	link(rel='stylesheet' href='/stylesheets/barr.css')
+		
+block content
+	div(style='display: none;')
+		#sampleitem
+			div
+				.col-md-6
+					p.text-left#name(style='color:blue;')
+				.col-md-6
+					p.text-right#time(style='color:grey;')
+			.container#content(style='')
+	#postdiv
+		input.col-md-8#text(type='text')
+		button.btn.btn-primary#submitbarr Shoot
+		button.btn.btn-warning#hidepost Hide
+		span#errorinfo(style='color: red;')
+	#listmain

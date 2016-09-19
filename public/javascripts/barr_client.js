@@ -8,16 +8,11 @@ function submitBarr() {
 	showErr("Sending");
 	var data = {
 		roundId: localRoundId,
-		text: $("#text").val(),
-		owner: $("#owner").val()
+		text: $("#text").val()
 	};
 	$("#text").val("");
 	if (data.text.length < 3 || data.text.length > 100) {
 		showErr("Illegal text");
-		return -1;
-	}
-	if (data.owner.length < 3 || data.owner.length > 30) {
-		showErr("Illegal name");
 		return -1;
 	}
 	$.post("/func/send", data, function(res) {
@@ -33,6 +28,7 @@ function submitBarr() {
 var eleList = [];
 var eleHead = 0;
 var sessionIdList = {};
+var lastColor = -1;
 const maxEle = 512;
 
 function randInt(x) {
@@ -53,7 +49,12 @@ function updateList() {
 				newEle.find("#content").html(res.data[i].text);
 				var brDate = new Date(res.data[i].time);
 				newEle.find("#time").html(brDate.toLocaleString());
-				newEle.addClass("bg" + randInt(5));
+				var newColor;
+				do {
+					newColor = randInt(5);
+				} while (newColor == lastColor);
+				lastColor = newColor;
+				newEle.addClass("bg" + newColor);
 				$("#listmain").prepend(newEle);
 				eleList.push(newEle);
 				if (res.data[i].time > timeLow) {
@@ -76,8 +77,11 @@ $(document).ready(function() {
 			submitBarr();
 		}
 	});
-	updateList();
+    if (needRefresh) {
+        updateList();
+    }
 	$("#hidepost").click(function() {
 		$("#postdiv").hide();
 	});
 });
+

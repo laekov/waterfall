@@ -1,5 +1,5 @@
 var express = require("express");
-var Barr = require('../modules/db/barrage');
+var Barr = require('../models/barrage');
 var toolkit = require('../modules/toolkit');
 var router = express();
 

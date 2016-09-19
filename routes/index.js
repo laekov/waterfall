@@ -3,7 +3,11 @@ var router = express();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-	res.render("index");
+    if (!req.user) {
+        res.redirect('/login');
+    } else {
+        res.render('index', { title: 'waterfall' });
+    }
 });
 
 module.exports = router;

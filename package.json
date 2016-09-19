@@ -17,6 +17,9 @@
 	"mongodb": ">=2.0.0",
 	"crypto": ">=0.0.3",
 	"step": ">=0.0.6",
+	"passport": "~0.3.2",
+	"passport-local": "~1.0.0",
+    "passport-local-mongoose": "~4.0.0",
 	"mongoose": ">=4.4.0"
   }
 }
