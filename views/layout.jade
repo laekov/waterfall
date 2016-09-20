@@ -3,12 +3,26 @@ html
 	head
 		block head
 			meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-			title= title
+			title= 'Waterfall - ' + title
 			link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
 			link(rel="stylesheet" href="/stylesheets/style.css")
 			meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
 			script(src='https://code.jquery.com/jquery-3.1.0.min.js')
 			script(src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js")
 	body
+		nav.navbar.navbar-default.navbar-fixed-top
+			.container-fluid
+				h4 
+					button.btn.btn-default.dropdown-toggle#dropdownMenu0(data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" aria-label='glyphicon glyphicon-menu-down')
+						span.glyphicon.glyphicon-align-left(aria-hidden='true')
+					span.col-xs-offset-1 Waterfall-
+					small= title
+					ul.dropdown-menu.navbar-right(aria-labelledby="dropdownMenu1")
+						li
+							a(href='/') Show rooms
+						li
+							a(href='/rounds/manage') Manage rooms
+						li
+							a(href='/login/logout') Log out
 		.container-fluid
 			block content

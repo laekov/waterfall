@@ -1,8 +1,7 @@
-body {
-	font-size: 14pt;
+.bg0 { background: #e0e0e0; }
+.bg1 { background: #eeeeee; }
+
+.namediv {
 }
-.bg0 { background: #ccf; }
-.bg1 { background: #fcc; }
-.bg2 { background: #fcf; }
-.bg3 { background: #cff; }
-.bg4 { background: #cfc; }
+.contentdiv {
+}

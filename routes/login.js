@@ -6,11 +6,11 @@ var Account = require('../models/account');
 var router = express();
 
 router.get('/', function(req, res) {
-    res.render('login', { title: 'waterfall - login' });
+    res.render('login', { title: 'login' });
 });
 
 router.get('/register', function(req, res) {
-    res.render('register', { title: 'waterfall - register' });
+    res.render('register', { title: 'register' });
 });
 
 router.post('/register', function(req, res) {

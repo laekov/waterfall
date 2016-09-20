@@ -12,12 +12,14 @@ append head
 block content
 	div(style='display: none;')
 		#sampleitem
-			div
-				.col-md-6
+			.row
+				.col-xs-2.namediv
 					p.text-left#name(style='color:blue;')
-				.col-md-6
-					p.text-right#time(style='color:grey;')
-			.container#content(style='')
+				.col-xs-8.contentdiv
+					#content(style='')
+				.col-xs-2
+					p.text-right.hidden#time(style='color:grey;')
+					p.text-right.hidden#status
 	#postdiv
 		input.col-md-8#text(type='text')
 		button.btn.btn-primary#submitbarr Shoot

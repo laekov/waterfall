@@ -7,7 +7,6 @@ function showErr(word) {
 function submitBarr() {
 	showErr("Sending");
 	var data = {
-		roundId: localRoundId,
 		text: $("#text").val()
 	};
 	$("#text").val("");
@@ -15,7 +14,7 @@ function submitBarr() {
 		showErr("Illegal text");
 		return -1;
 	}
-	$.post("/func/send", data, function(res) {
+	$.post("/room/" + localRoundId + "/send", data, function(res) {
 		if (res.error) {
 			showErr(res.message);
 		} else {
@@ -27,8 +26,7 @@ function submitBarr() {
 
 var eleList = [];
 var eleHead = 0;
-var sessionIdList = {};
-var lastColor = -1;
+var lastColor = 1;
 const maxEle = 512;
 
 function randInt(x) {
@@ -36,25 +34,19 @@ function randInt(x) {
 }
 
 function updateList() {
-	$.post("/func/get", { roundId: localRoundId, timeLow: timeLow }, function(res) {
+	$.post("/room/" + localRoundId + "/get", { timeLow: timeLow }, function(res) {
 		if (res.error) {
 			showErr(res.error);
 		} else {
 			for (var i in res.data) {
-				if (sessionIdList[res.data[i].barrId] != undefined) continue;
-				sessionIdList[res.data[i].barrId] = res.data[i].sessionId;
 				var newEle = $("#sampleitem").clone();
 				newEle.attr("id", res.data[i].barrId);
 				newEle.find("#name").html(res.data[i].owner);
 				newEle.find("#content").html(res.data[i].text);
 				var brDate = new Date(res.data[i].time);
 				newEle.find("#time").html(brDate.toLocaleString());
-				var newColor;
-				do {
-					newColor = randInt(5);
-				} while (newColor == lastColor);
-				lastColor = newColor;
-				newEle.addClass("bg" + newColor);
+                lastColor ^= 1;
+				newEle.addClass("bg" + lastColor);
 				$("#listmain").prepend(newEle);
 				eleList.push(newEle);
 				if (res.data[i].time > timeLow) {

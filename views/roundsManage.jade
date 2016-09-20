@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	table.table.table-striped
+		form(method='post' action='/rounds/update/reg')
+			tr
+				td
+					input.form-control(type='text' name='roundId' placeholder='Round name')
+				td
+					button.btn.btn-success New
+		- for (var i in list)
+			tr
+				form(method='post' action='/rounds/update/dismiss')
+					input(style='display:none' type='text' name='roundId' value='#{list[i]}')
+					td
+						label.col-md-6 #{list[i]}
+					td
+						button.btn.btn-danger Remove
