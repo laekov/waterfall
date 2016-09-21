@@ -2,7 +2,7 @@ var express = require('express');
 var passport = require('passport');
 var access = require('../modules/access');
 var Account = require('../models/account');
-var navList = require('../modules/navList');
+var navList = require('../modules/navlist');
 
 var router = express();
 
