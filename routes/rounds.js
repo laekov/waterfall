@@ -1,6 +1,7 @@
 var express = require('express');
 var roundMan = require('../modules/roundman');
 var access = require('../modules/access');
+var navList = require('../modules/navlist');
 var router = express();
 
 router.post('/update/:operation', function(req, res) {
@@ -36,10 +37,13 @@ router.get('/manage', function(req, res) {
         if (!availible) {
             return res.redirect('/login');
         }
-        res.render('roundsManage', { 
-            title: 'rounds manage', 
-            list: roundMan.list() 
-        });
+		navList.generate(req.user, function(navList) {
+			res.render('roundsManage', { 
+				title: 'rounds manage', 
+				list: roundMan.list(),
+				navList: navList
+			});
+		});
     });
 });
 

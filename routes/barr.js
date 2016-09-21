@@ -4,6 +4,7 @@ var Ban = require('../models/ban');
 var toolkit = require('../modules/toolkit');
 var access = require('../modules/access');
 var roundMan = require('../modules/roundman');
+var navList = require('../modules/navlist');
 var router = express();
 
 var nSaveTime = 10000;
@@ -105,11 +106,14 @@ router.get("/:roundId", function(req, res) {
 	}
 	roundMan.login(req.params.roundId, req.user.username);
 	access.has('u_' + req.user.username, 'view', function(viewable) {
-		res.render("barrage", { 
-            title: req.params.roundId, 
-            roundId: req.params.roundId, 
-            needUpdate: viewable 
-        });
+		navList.generate(req.user, function(navList) {
+			res.render("barrage", { 
+				title: req.params.roundId, 
+				roundId: req.params.roundId, 
+				needUpdate: viewable,
+				navList: navList
+			});
+		});
 	});
 });
 

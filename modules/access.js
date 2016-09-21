@@ -1,6 +1,9 @@
 var Access = require('../models/access');
 
 function getDoc(uId, done) {
+	if (typeof(uId) != 'string') {
+		return done(false);
+	}
     Access.findOne({ uId: uId }, function(err, doc) {
         if (err) {
             return done(false);
@@ -10,6 +13,8 @@ function getDoc(uId, done) {
 }
 
 var ret = {};
+
+ret.getDoc = getDoc;
 
 ret.has = function(a, b, done) {
     if (typeof(a) != 'string' || typeof(b) != 'string') {

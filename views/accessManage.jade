@@ -1,0 +1,25 @@
+extends layout
+
+append head
+	script(src='/javascripts/accessmanage.js')
+
+block content
+	.form-group
+		label(for='username') View access
+		input.form-control#viewusername(type='text' placeholder='username')
+		button.btn.btn-default#submitview View
+		.container
+			p#accesslist
+	.form-group
+		label(for='username') Add access
+		form(method='post' action='/access/update/add')
+			input.form-control(type='text' name='username' placeholder='username')
+			input.form-control(type='text' name='accesstag' placeholder='accesstag')
+			button.btn.btn-primary(type='submit') Add
+	.form-group
+		label(for='username') Remove access
+		form(method='post' action='/access/update/remove')
+			input.form-control(type='text' name='username' placeholder='username')
+			input.form-control(type='text' name='accesstag' placeholder='accesstag')
+			button.btn.btn-danger(type='submit') Remove
+

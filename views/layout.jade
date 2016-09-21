@@ -18,11 +18,8 @@ html
 					span.col-xs-offset-1 Waterfall-
 					small= title
 					ul.dropdown-menu.navbar-right(aria-labelledby="dropdownMenu1")
-						li
-							a(href='/') Show rooms
-						li
-							a(href='/rounds/manage') Manage rooms
-						li
-							a(href='/login/logout') Log out
+						- for (var i in navList)
+							li
+								a(href='#{navList[i].href}') #{navList[i].text}
 		.container-fluid
 			block content

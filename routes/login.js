@@ -2,15 +2,26 @@ var express = require('express');
 var passport = require('passport');
 var access = require('../modules/access');
 var Account = require('../models/account');
+var navList = require('../modules/navList');
 
 var router = express();
 
 router.get('/', function(req, res) {
-    res.render('login', { title: 'login' });
+	navList.generate(req.user, function(navList) {
+		res.render('login', { 
+			title: 'login',
+			navList: navList
+		});
+	});
 });
 
 router.get('/register', function(req, res) {
-    res.render('register', { title: 'register' });
+	navList.generate(req.user, function(navList) {
+		res.render('register', { 
+			title: 'register',
+			navList: navList
+	   	});
+	});
 });
 
 router.post('/register', function(req, res) {
