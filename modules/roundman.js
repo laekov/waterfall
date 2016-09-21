@@ -3,7 +3,11 @@ var RoundController = function(roundId) {
 	var self = this;
 	self.roundId = roundId;
 	self.audiences = [];
+	self.count = 0;
 	self.login = function(username) {
+		if (!self.audiences[username]) {
+			++ self.count;
+		}
 		self.audiences[username] = { lastPost: 0 };
 	}
 	self.checkSend = function(username) {
@@ -23,34 +27,37 @@ var RoundController = function(roundId) {
 
 var RoundManager = function() {
 	var self = this;
-	var rounds = [];
+	self.rounds = [];
 	self.reg = function(roundId) {
-		rounds[roundId] = new RoundController(roundId);
+		self.rounds[roundId] = new RoundController(roundId);
 	}
 	self.dismiss = function(roundId) {
-		delete rounds[roundId];
+		delete self.rounds[roundId];
 	}
 	self.login = function(roundId, username) {
-		if (rounds[roundId]) {
-			rounds[roundId].login(username);
+		if (self.rounds[roundId]) {
+			self.rounds[roundId].login(username);
 		}
 	}
 	self.checkSend = function(roundId, username) {
-		if (rounds[roundId]) {
-			return rounds[roundId].checkSend(username);
+		if (self.rounds[roundId]) {
+			return self.rounds[roundId].checkSend(username);
 		} else {
 			return 'No such round';
 		}
 	}
 	self.commitSend = function(roundId, username) {
-		if (rounds[roundId]) {
-			rounds[roundId].commitSend(username);
+		if (self.rounds[roundId]) {
+			self.rounds[roundId].commitSend(username);
 		}
 	}
 	self.list = function() {
 		var ret = [];
-		for (var i in rounds) {
-			ret.push(i);
+		for (var i in self.rounds) {
+			ret.push({
+				roundId: i,
+				count: self.rounds[i].count
+			});
 		}
 		return ret;
 	}

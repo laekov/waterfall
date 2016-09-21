@@ -39,7 +39,7 @@ router.get('/manage', function(req, res) {
         }
 		navList.generate(req.user, function(navList) {
 			res.render('roundsManage', { 
-				title: 'rounds manage', 
+				title: 'Room manager', 
 				list: roundMan.list(),
 				navList: navList
 			});

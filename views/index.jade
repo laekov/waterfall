@@ -1,13 +1,24 @@
 extends layout
 block content
 	table.table.table-striped
-		- for (var i in list)
-			tr
-				td 
-					p #{list[i]}
-				td
-					a.btn.btn-default(href='/room/#{list[i]}') Join
 		- if (list.length == 0)
 			tr
 				td 
 					p No room availible
+		- else
+			tr
+				td
+					p Round
+				td
+					p Audience count
+				td
+					p Action
+		- for (var i in list)
+			tr
+				td 
+					p #{list[i].roundId}
+				td
+					p.small #{list[i].count}
+				td
+					a.btn.btn-default(href='/room/#{list[i].roundId}') Join
+

@@ -19,6 +19,10 @@ ret.generate = function(user, done) {
 			'href': '/'
 		});
 		res.push({
+			'text': 'Reset password',
+			'href': '/login/resetpassword'
+		});
+		res.push({
 			'text': 'Log out',
 			'href': '/login/logout'
 		});
@@ -26,7 +30,7 @@ ret.generate = function(user, done) {
 			if (doc) {
 				if (doc.list.indexOf('rounds') != -1) {
 					res.push({
-						'text': 'Manage rounds',
+						'text': 'Manage rooms',
 						'href': '/rounds/manage'
 					});
 				}

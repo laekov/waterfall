@@ -22,9 +22,13 @@ block content
 			.row
 				.col-xs-12
 					p.text-right.hidden#time(style='color:grey;')
-	#postdiv
-		input.col-md-8#text(type='text')
-		button.btn.btn-primary#submitbarr Shoot
-		button.btn.btn-warning#hidepost Hide
-		span#errorinfo(style='color: red;')
+	#postdiv.container-fluid
+		.row
+			.col-xs-7
+				input.form-control#text(type='text')
+			.col-xs-5
+				button.btn.btn-primary#submitbarr Shoot
+				button.btn.btn-warning#hidepost Hide
+		.row
+			span#errorinfo(style='color: red;')
 	#listmain
