@@ -11,6 +11,10 @@ ret.generate = function(user, done) {
 		done(res);
 	} else {
 		res.push({
+			'text': 'Currently logged in as ' + user.username,
+			'href': '#'
+		});
+		res.push({
 			'text': 'Show rooms',
 			'href': '/'
 		});
