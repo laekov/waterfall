@@ -1,0 +1,16 @@
+extends layout
+
+append head
+	script(src='/javascripts/blogedit.js')
+
+block content
+	.col-xs-12
+		.form-group
+			input.form-control(type='text' name='postId' placeholder='post id')#postId
+			button.btn.btn-default#loadBlog Load
+			button.btn.btn-primary#postBlog Post
+			span.bg-danger#errorMessage
+			span.bg-success#successMessage
+			span.bg-primary#pendingMessage
+		.form-group
+			textarea.form-control(rows='16')#content

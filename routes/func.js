@@ -1,6 +1,7 @@
 var express = require("express");
 var Barr = require('../models/barrage');
 var Ban = require('../models/ban');
+var Blog = require('../models/blog');
 var xml = require('xml');
 var toolkit = require('../modules/toolkit');
 var access = require('../modules/access');
@@ -124,17 +125,36 @@ router.post("/addBan", function(req, res) {
     }
 });
 
-router.post('/wechat/get', function(req, res) {
+function xmlRenderRes(req, res, content) {
 	var xmlStr = xml({
 		xml: [
 			{ ToUserName: req.body.xml.fromusername[0] },
 			{ FromUserName: req.body.xml.tousername[0] },
 			{ CreateTime: Date.now() },
 			{ MsgType: 'text' },
-			{ Content: 'Function not ready' }
+			{ Content: content }
 		]
 	});
-	res.send(xmlStr);
+	return res.send(xmlStr);
+}
+router.post('/wechat/get', function(req, res) {
+	var cmd = req.body.xml.content.split(' ');
+	if (cmd[0] == 'blog' || cmd[0] == 'bulletin') {
+		var blogTitle = cmd[0];
+		if (cmd[0] == 'blog' && !cmd[1]) {
+			return xmlRenderRes(req, res, 'Argument error');
+		} else if (cmd[0] == 'blog') {
+			blogTitle = cmd[1];
+		}
+		Blog.findOne({ postId: blogTitle }, function(err, doc) {
+			if (err || !doc) {
+				return xmlRenderRes(req, res, 'No such blog');
+			} else {
+				return xmlRenderRes(req, res, doc.content);
+			}
+		});
+	}
+	return xmlRenderRes(req, res, 'Function not supported yet');
 });
 router.get('/wechat/get', function(req, res) {
 	res.send(req.query.echostr);

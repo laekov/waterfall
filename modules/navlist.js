@@ -43,7 +43,14 @@ ret.generate = function(user, done) {
 						'text': 'Manage access',
 						'href': '/access/manage'
 					});
+				}	
+				if (doc.list.indexOf('access') != -1) {
+					res.push({
+						'text': 'Edit blog',
+						'href': '/blog/edit'
+					});
 				}
+	
 			}
 			done(res);
 		});
