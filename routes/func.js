@@ -124,17 +124,20 @@ router.post("/addBan", function(req, res) {
     }
 });
 
-router.post('/wechat/get/:roundId', function(req, res) {
+router.post('/wechat/get', function(req, res) {
 	var xmlStr = xml({
 		xml: [
-			{ ToUserName: req.body.fromusername },
-			{ FromUserName: req.body.tousername },
+			{ ToUserName: req.body.xml.fromusername[0] },
+			{ FromUserName: req.body.xml.tousername[0] },
 			{ CreateTime: Date.now() },
 			{ MsgType: 'text' },
 			{ Content: 'Function not ready' }
 		]
 	});
 	res.send(xmlStr);
+});
+router.get('/wechat/get', function(req, res) {
+	res.send(req.query.echostr);
 });
 
 module.exports = router;

@@ -1,4 +1,4 @@
-#!/opt/local/bin/node
+#!/usr/bin/nodejs
 
 var app = require("../app");
 var fs = require('fs');
@@ -13,7 +13,7 @@ var serverOptionsList = [ {
 	dburl: "mongodb://127.0.0.1/waterfall"
 }];
 
-var serverOptions = serverOptionsList[0];
+var serverOptions = serverOptionsList[1];
 
 if (process.env.OPENSHIFT_NODEJS_IP) {
 	serverOptions = {
