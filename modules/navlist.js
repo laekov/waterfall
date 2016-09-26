@@ -5,8 +5,12 @@ ret.generate = function(user, done) {
 	var res = [];
 	if (!user) {
 		res.push({
-			'text': 'login',
+			'text': 'Login',
 			'href': '/login'
+		});
+		res.push({
+			'text': 'Register',
+			'href': '/login/register'
 		});
 		done(res);
 	} else {
