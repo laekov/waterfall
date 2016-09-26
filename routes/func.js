@@ -126,11 +126,13 @@ router.post("/addBan", function(req, res) {
 
 router.post('/wechat/get/:roundId', function(req, res) {
 	var xmlStr = xml({
-		ToUserName: req.body.fromusername,
-		FromUserName: req.body.tousername,
-		CreateTime: Date.now(),
-		MsgType: 'text',
-		Content: 'Function not ready'
+		xml: [
+			{ ToUserName: req.body.fromusername },
+			{ FromUserName: req.body.tousername },
+			{ CreateTime: Date.now() },
+			{ MsgType: 'text' },
+			{ Content: 'Function not ready' }
+		]
 	});
 	res.send(xmlStr);
 });
