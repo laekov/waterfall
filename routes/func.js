@@ -1,6 +1,7 @@
 var express = require("express");
 var Barr = require('../models/barrage');
 var Ban = require('../models/ban');
+var xml = require('xml');
 var toolkit = require('../modules/toolkit');
 var access = require('../modules/access');
 var router = express();
@@ -121,6 +122,17 @@ router.post("/addBan", function(req, res) {
             res.send({ error: 404, message: "illegal data" });
         }
     }
+});
+
+router.post('/wechat/get/:roundId', function(req, res) {
+	var xmlStr = xml({
+		ToUserName: req.body.fromusername,
+		FromUserName: req.body.tousername,
+		CreateTime: Date.now(),
+		MsgType: 'text',
+		Content: 'Function not ready'
+	});
+	res.send(xmlStr);
 });
 
 module.exports = router;

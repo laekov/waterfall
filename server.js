@@ -1,10 +1,11 @@
 #!/bin/env node
 
 var app = require("./app");
+var fs = require('fs');
 
 var serverOptions = {
-	ipaddress: "localhost",
-	port: 2334,
+	ipaddress: "ec2-52-11-57-80.us-west-2.compute.amazonaws.com",
+	port: 80,
 	dburl: "mongodb://127.0.0.1/waterfall"
 };
 
@@ -16,9 +17,13 @@ if (process.env.OPENSHIFT_NODEJS_IP) {
 	};
 }
 
+var httpsOptions = {
+	key: fs.readFileSync('./cert/server.key'),
+	cert: fs.readFileSync('./cert/server.crt')
+};
+
 app.connectDB(serverOptions.dburl);
 
 app.listen(serverOptions.port, serverOptions.ipaddress, function() {
 	console.log('%s: Node server started on %s:%d ...', Date(Date.now()), serverOptions.ipaddress, serverOptions.port);
 });
-

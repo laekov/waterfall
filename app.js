@@ -5,6 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var xmlParser = require('express-xml-bodyparser');
 var mongoose = require('mongoose');
 var passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy;
@@ -25,6 +26,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false, limit: "10mb"}));
 app.use(cookieParser());
+app.use(xmlParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
     resave: false,
