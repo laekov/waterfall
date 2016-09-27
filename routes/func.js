@@ -145,11 +145,11 @@ const defBlogList = {
 };
 router.post('/wechat/get', function(req, res) {
 	var cmd = req.body.xml.content[0].split(' ');
-	if (cmd[0] == 'blog' || defBlogList[cmd[0]]) {
+	if (cmd[0] == 'vi' || defBlogList[cmd[0]]) {
 		var blogTitle = defBlogList[cmd[0]];
-		if (cmd[0] == 'blog' && !cmd[1]) {
+		if (cmd[0] == 'vi' && !cmd[1]) {
 			return xmlRenderRes(req, res, 'Argument error');
-		} else if (cmd[0] == 'blog') {
+		} else if (cmd[0] == 'vi') {
 			blogTitle = cmd[1];
 		}
 		Blog.findOne({ postId: blogTitle }, function(err, doc) {
