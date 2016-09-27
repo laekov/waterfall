@@ -137,10 +137,16 @@ function xmlRenderRes(req, res, content) {
 	});
 	return res.send(xmlStr);
 }
+const defBlogList = {
+	ls: 'bulletin',
+	bulletin: 'bulletin',
+	help: 'help',
+	version: 'version',
+};
 router.post('/wechat/get', function(req, res) {
-	var cmd = req.body.xml.content.split(' ');
-	if (cmd[0] == 'blog' || cmd[0] == 'bulletin') {
-		var blogTitle = cmd[0];
+	var cmd = req.body.xml.content[0].split(' ');
+	if (cmd[0] == 'blog' || defBlogList[cmd[0]]) {
+		var blogTitle = defBlogList[cmd[0]];
 		if (cmd[0] == 'blog' && !cmd[1]) {
 			return xmlRenderRes(req, res, 'Argument error');
 		} else if (cmd[0] == 'blog') {
@@ -153,8 +159,9 @@ router.post('/wechat/get', function(req, res) {
 				return xmlRenderRes(req, res, doc.content);
 			}
 		});
+	} else {
+		return xmlRenderRes(req, res, 'Function not supported yet');
 	}
-	return xmlRenderRes(req, res, 'Function not supported yet');
 });
 router.get('/wechat/get', function(req, res) {
 	res.send(req.query.echostr);
