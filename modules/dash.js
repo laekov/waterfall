@@ -30,7 +30,7 @@ function postDash(attr, callback) {
 			callback(data.error.message);
 			return undefined;
 		}
-		var doc = data.doc;
+		var doc = data.data;
 		if (doc && doc.length) {
 			callback('You speak too frequently');
 			return undefined;
@@ -51,7 +51,7 @@ function getDash(callback) {
 		if (data.error) {
 			return callback(data.error.message);
 		}
-		var doc = data.doc;
+		var doc = data.data;
 		var res = '';
 		for (var i in doc) {
 			res += doc[i].text + ' @' + new Date(doc[i].time).toLocaleTimeString();
