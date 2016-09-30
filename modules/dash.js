@@ -36,9 +36,9 @@ function postDash(attr, callback) {
 			return undefined;
 		}
 		barr.sendBarr(attr, this);
-	}, function(err) {
-		if (err) {
-			return callback(err);
+	}, function(data) {
+		if (data.error) {
+			return callback(data.error.message);
 		}
 		callback('Done');
 	});
