@@ -25,10 +25,11 @@ function postDash(attr, callback) {
                     $gt: Date.now()
                 }
             }, this);
-        }, function(err, doc) {
-            if (err) {
-                throw(err);
+        }, function(data) {
+            if (data.error) {
+                throw(error.message);
             }
+			var doc = data.doc;
             if (doc && doc.length) {
                 throw('You speak too frequently');
             }
@@ -47,10 +48,11 @@ function postDash(attr, callback) {
 function getDash(callback) {
     barr.getBarr({
         roundId: 'dash'
-    }, function(err, doc) {
-        if (err) {
-            return callback(err);
+    }, function(data) {
+        if (data.error) {
+            return callback(data.error.message);
         }
+		var doc = data.doc;
         var res = '';
         for (var i in doc) {
             res += doc[i].text + ' @' + new Date(doc[i].time).toLocaleTimeString();
