@@ -55,7 +55,7 @@ function getDash(callback) {
         for (var i in doc) {
             res += doc[i].text + ' @' + new Date(doc[i].time).toLocaleTimeString();
         }
-        if (!res) {
+        if (res == '') {
             res = 'Nothing';
         }
         callback(res);
