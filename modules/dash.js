@@ -10,10 +10,10 @@ const maxLength = 64;
 const dashLifetime = 12 * 60 * 60 * 1000;
 
 function postDash(attr, callback) {
-    if (!attr.content || typeof(attr.content) != 'string') {
+    if (!attr.text || typeof(attr.text) != 'string') {
         return callback('Illegal string');
     }
-    if (attr.content.length > maxLength) {
+    if (attr.text.length > maxLength) {
         return callback('You said too much');
     }
     barr.cleanBarr();
