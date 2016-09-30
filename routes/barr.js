@@ -1,33 +1,12 @@
 var express = require("express");
-var Barr = require('../models/barrage');
-var Ban = require('../models/ban');
+var barr = require('../modules/barr');
 var toolkit = require('../modules/toolkit');
 var access = require('../modules/access');
 var roundMan = require('../modules/roundman');
 var navList = require('../modules/navlist');
 var router = express();
 
-var nSaveTime = 10000;
-var nLastClean = 0;
-
-function cleanBarr() {
-	var cTime = Date.now();
-	if (cTime > nLastClean + nSaveTime) {
-		nLastClean = cTime;
-		Barr.remove({ time: { $lt: cTime - nSaveTime } }, function(err) {
-			if (err) {
-				//console.log(err);
-			}
-		});
-	}
-}
-
-function checkString(x) {
-	while (x.match("<")) {
-		x = x.replace("<", "&lt;");
-	}
-	return x;
-}
+const lifetime = 30000;
 
 router.post("/:roundId/send", function(req, res) {
     if (!req.user) {
@@ -37,13 +16,13 @@ router.post("/:roundId/send", function(req, res) {
         if (!availible) {
             return res.send({ error: 403, message: 'access deined' });
         }
-        cleanBarr();
         var barrData = {
             barrId: toolkit.md5sum(Date.now() + req.body.text),
             roundId: req.params.roundId,
-            text: checkString(req.body.text),
+            text: toolkit.checkString(req.body.text),
             owner: req.user.username,
-            time: Date.now()
+            time: Date.now(),
+            deadline: Date.now() + lifetime
         };
 		var roundCheckRes = roundMan.checkSend(barrData.roundId, barrData.owner);
 		if (roundCheckRes) {
@@ -51,23 +30,8 @@ router.post("/:roundId/send", function(req, res) {
 		} else {
 			roundMan.commitSend(barrData.roundId, barrData.owner);
 		}
-        var banPattern = {
-            $or: [ { owner: barrData.owner } ],
-        };
-        Ban.find(banPattern, function(err, doc) {
-            if (doc.length) {
-                res.send({ error: 403, message: "You are not allowed to speak" });
-            } else {
-                if (barrData.text.length < 2 || barrData.text.length > 64) {
-                    res.send({ error: 403, message: 'Invalid text'});
-                }
-                else {
-                    var barr = new Barr(barrData);
-                    barr.save(function(err) {
-                        res.send({ error: err, time: barrData.time });
-                    });
-                }
-            }
+        barr.sendBarr(barrData, function(data) {
+            res.send(data);
         });
     });
 });
@@ -90,12 +54,8 @@ router.post("/:roundId/get", function(req, res) {
             time: { $gt: timeLow },
             roundId: req.params.roundId
         };
-        Barr.find(findPattern, function(err, doc) {
-            if (err) {
-                res.send({error: err});
-            } else {
-                res.send({ data: doc });
-            }
+        barr.getBarr(findPattern, function(data) {
+            res.send(data);
         });
     });
 });

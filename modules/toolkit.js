@@ -405,5 +405,25 @@ ret.toNumber = function(x) {
 	}
 }
 
+ret.xmlRenderRes = function(req, res, content) {
+	var xmlStr = xml({
+		xml: [
+		{ ToUserName: req.body.xml.fromusername[0] },
+		{ FromUserName: req.body.xml.tousername[0] },
+		{ CreateTime: Date.now() },
+		{ MsgType: 'text' },
+		{ Content: content }
+		]
+	});
+	return res.send(xmlStr);
+}
+
+ret.checkString = function(x) {
+	while (x.match("<")) {
+		x = x.replace("<", "&lt;");
+	}
+	return x;
+}
+
 module.exports = ret;
 
