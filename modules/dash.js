@@ -1,3 +1,4 @@
+var Step = require('step');
 var barr = require('../modules/barr.js');
 var toolkit = require('../modules/toolkit');
 var xmlRenderRes = toolkit.xmlRenderRes;
@@ -27,7 +28,7 @@ function postDash(attr, callback) {
             }, this);
         }, function(data) {
             if (data.error) {
-                throw(error.message);
+                throw(data.error.message);
             }
 			var doc = data.doc;
             if (doc && doc.length) {
