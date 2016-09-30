@@ -1,4 +1,5 @@
 var crypto = require("crypto");
+var xml = require('xml');
 
 var ret = new Object();
 
