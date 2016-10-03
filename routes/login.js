@@ -28,6 +28,9 @@ router.post('/register', function(req, res) {
 	if (req.body.password != req.body.passwordRepeat) {
 		return res.redirect('/login/register');
 	}
+	if (!req.body.username || !req.body.username.match(/^\w{3,15}$/)) {
+		return res.redirect('/login/register');
+	}
 	Account.register(new Account({ username: req.body.username }), req.body.password, function(err, account) {
 		if (err) {
 			return res.redirect('/login/register');

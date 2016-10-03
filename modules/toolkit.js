@@ -420,8 +420,14 @@ ret.xmlRenderRes = function(req, res, content) {
 }
 
 ret.checkString = function(x) {
+	if (typeof(x) != 'string') {
+		return 'What does the fox say?';
+	}
 	while (x.match("<")) {
 		x = x.replace("<", "&lt;");
+	}
+	while (x.match(">")) {
+		x = x.replace(">", "&gt;");
 	}
 	return x;
 }
