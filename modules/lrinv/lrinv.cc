@@ -1,4 +1,7 @@
-///under GPLV3 by LuRui
+/* under GPLV3 
+ * codeli	by	LuRui	@Oct.14 2016
+ * modified by	laekov	@Oct.14 2016
+ */
 #include<cstdio>
 #include<iostream>
 #include<cmath>
@@ -13,6 +16,7 @@ struct frac
     {
         up = x.up;
         down = x.down;
+		return *this;
     };
 };
 int gcd(int a,int b)
@@ -68,9 +72,10 @@ frac operator / (frac a, frac b)
 void frprint(frac x)
 {
     if(x.down != 1&&x.up != 0)
-        cout << x.up << "/" << x.down;
+		printf("%3d/%-3d", x.up, x.down);
     else
-        cout << x.up;
+		printf("   %-4d", x.up);
+	putchar(32);
 }
 frac coef[MAXN][MAXN];
 int n;
@@ -170,7 +175,6 @@ int main()
             for(int j = 0; j < n; j++)
             {
                 frprint(coef[i][j + n]);
-                cout << "\t";
             }
 			if (i + 1 < n) 
 			{
