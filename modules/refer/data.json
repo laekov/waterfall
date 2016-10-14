@@ -1,0 +1,2020 @@
+[{
+	"en": "Addition of vectors",
+	"cn": "向量的加法",
+	"pages": "2,3,33,121"
+},
+{
+	"en": "All combinations",
+	"cn": "所有组合",
+	"pages": "5,122,123"
+},
+{
+	"en": "Angle between vectors",
+	"cn": "向量间的夹角",
+	"pages": "14,15"
+},
+{
+	"en": "Anti-symmetric",
+	"cn": "反对称",
+	"pages": "109"
+},
+{
+	"en": "Area",
+	"cn": "面积",
+	"pages": "272,273,280"
+},
+{
+	"en": "Arnoldi iteration",
+	"cn": "rnoldi迭代",
+	"pages": "488,491,492"
+},
+{
+	"en": "Arrow",
+	"cn": "箭头",
+	"pages": "3,4,423"
+},
+{
+	"en": "Associative law",
+	"cn": "结合律",
+	"pages": "58,59,69,80"
+},
+{
+	"en": "Average",
+	"cn": "平均值",
+	"pages": "227,450,456"
+},
+{
+	"en": "Back substitution",
+	"cn": "回代",
+	"pages": "45,49,98"
+},
+{
+	"en": "Backslash",
+	"cn": "反斜杠",
+	"pages": "99,156"
+},
+{
+	"en": "Basis",
+	"cn": "基底",
+	"pages": "168,172,180,200,391"
+},
+{
+	"en": "Binomial",
+	"cn": "二项式",
+	"pages": "442,454"
+},
+{
+	"en": "Bioinformatics",
+	"cn": "生物信息学",
+	"pages": "457"
+},
+{
+	"en": "BLAS:Basic Linear Algebra Subrontines",
+	"cn": "基本线性代数子程序",
+	"pages": "466"
+},
+{
+	"en": "Block elimination",
+	"cn": "分块消去",
+	"pages": "71"
+},
+{
+	"en": "Block multiplication",
+	"cn": "分块相乘",
+	"pages": "70,79"
+},
+{
+	"en": "Block pivot",
+	"cn": "主元块",
+	"pages": "94"
+},
+{
+	"en": "Boundary condition",
+	"cn": "边界条件",
+	"pages": "417"
+},
+{
+	"en": "Calculus",
+	"cn": "微积分学",
+	"pages": "25,281,417"
+},
+{
+	"en": "Cayley-Hamilton",
+	"cn": "凯莱-哈密顿",
+	"pages": "310,311,362"
+},
+{
+	"en": "Centered difference",
+	"cn": "中心差分",
+	"pages": "25,28,316,328"
+},
+{
+	"en": "Change of basis",
+	"cn": "基底的变化",
+	"pages": "358,390,391,396,400"
+},
+{
+	"en": "Characteristic polynomial",
+	"cn": "特征多项式",
+	"pages": "287"
+},
+{
+	"en": "Cholesky factorization",
+	"cn": "柯勒斯基分解",
+	"pages": "102,345,353,564"
+},
+{
+	"en": "Circle",
+	"cn": "圆，圆周",
+	"pages": "315,316"
+},
+{
+	"en": "Clock",
+	"cn": "钟",
+	"pages": "9"
+},
+{
+	"en": "Closest line",
+	"cn": "最邻近线",
+	"pages": "218,219,222"
+},
+{
+	"en": "Cofactors",
+	"cn": "代数余子式",
+	"pages": "255,259,260,265,270"
+},
+{
+	"en": "Column at a time",
+	"cn": "逐列",
+	"pages": "23,32,36"
+},
+{
+	"en": "Column picture",
+	"cn": "列图",
+	"pages": "32,34,40"
+},
+{
+	"en": "Column space C(A)",
+	"cn": "列空间C(A)",
+	"pages": "123,124,130"
+},
+{
+	"en": "Column vector",
+	"cn": "列向量",
+	"pages": "2,4"
+},
+{
+	"en": "Columns times rows",
+	"cn": "列乘行",
+	"pages": "62,68,71,145,150"
+},
+{
+	"en": "Combination of columns",
+	"cn": "列的组合",
+	"pages": "32,33,56"
+},
+{
+	"en": "Commutative",
+	"cn": "交换的",
+	"pages": "59,69"
+},
+{
+	"en": "Commuting matrices",
+	"cn": "交换矩阵",
+	"pages": "305"
+},
+{
+	"en": "Complete solution",
+	"cn": "通解",
+	"pages": "136,156,159,162,313"
+},
+{
+	"en": "Complex",
+	"cn": "复数",
+	"pages": "120,340,493,494,499,000,000"
+},
+{
+	"en": "Complex eigenvalues",
+	"cn": "复特征值",
+	"pages": "289,333"
+},
+{
+	"en": "Complex eigenvectors",
+	"cn": "复特征向量",
+	"pages": "289,333"
+},
+{
+	"en": "Compression",
+	"cn": "压缩",
+	"pages": "364,373,391,410"
+},
+{
+	"en": "Computational science",
+	"cn": "计算科学",
+	"pages": "189,317,419,427"
+},
+{
+	"en": "Computer graphics",
+	"cn": "电脑图形图像",
+	"pages": "459,462,463"
+},
+{
+	"en": "Condition number",
+	"cn": "条件数",
+	"pages": "371,477,478"
+},
+{
+	"en": "Conjugate",
+	"cn": "共轭的",
+	"pages": "333,338,494,501,506"
+},
+{
+	"en": "Conjugate gradients",
+	"cn": "共轭梯度",
+	"pages": "486,492"
+},
+{
+	"en": "Constant coefficients",
+	"cn": "常系数",
+	"pages": "312"
+},
+{
+	"en": "Convolution",
+	"cn": "卷积",
+	"pages": "515"
+},
+{
+	"en": "Corner",
+	"cn": "棱角",
+	"pages": "8,441,443"
+},
+{
+	"en": "Cosine of angle",
+	"cn": "余弦角",
+	"pages": "15,17,447"
+},
+{
+	"en": "Cosine Law",
+	"cn": "余弦定律",
+	"pages": "20"
+},
+{
+	"en": "Cosine of matrix",
+	"cn": "余弦矩阵",
+	"pages": "329"
+},
+{
+	"en": "Cost vector",
+	"cn": "费用向量",
+	"pages": "440"
+},
+{
+	"en": "Covariance",
+	"cn": "协方差",
+	"pages": "228,453-458"
+},
+{
+	"en": "Cramer’s Rule",
+	"cn": "克拉默法则",
+	"pages": "259,269,279"
+},
+{
+	"en": "Cross product",
+	"cn": "叉积",
+	"pages": "275,276"
+},
+{
+	"en": "Cube",
+	"cn": "立方，立方体",
+	"pages": "8,73,274,281,464"
+},
+{
+	"en": "Cyclic",
+	"cn": "周期性的",
+	"pages": "25,93,374"
+},
+{
+	"en": "Delta function",
+	"Dcn": "elta函数",
+	"pages": "449,452"
+},
+{
+	"en": "Dependent",
+	"cn": "相关的",
+	"pages": "26,27,169,170"
+},
+{
+	"en": "Derivative",
+	"cn": "导数",
+	"pages": "24,109,229,384,395"
+},
+{
+	"en": "Determinant",
+	"cn": "行列式",
+	"pages": "63,244-280,288,295"
+},
+{
+	"en": "Diagonalizable",
+	"cn": "可对角化",
+	"pages": "300,304,308,334,335"
+},
+{
+	"en": "Diagonalization",
+	"cn": "对角化",
+	"pages": "298,300,330,332,363,000"
+},
+{
+	"en": "Differential equation",
+	"cn": "微分方程",
+	"pages": "312-329,416"
+},
+{
+	"en": "Dimension",
+	"cn": "维数",
+	"pages": "145,168,174,175,176,000,000,000"
+},
+{
+	"en": "Discrete cosines",
+	"cn": "离散cosine",
+	"pages": "336,373"
+},
+{
+	"en": "Discrete sines",
+	"cn": "离散sine",
+	"pages": "336,373"
+},
+{
+	"en": "Distance to subspace",
+	"cn": "到子空间的距离",
+	"pages": "212"
+},
+{
+	"en": "Distributive law",
+	"cn": "分配律",
+	"pages": "69"
+},
+{
+	"en": "Dot product",
+	"cn": "点积",
+	"pages": "11,56,108,447,502"
+},
+{
+	"en": "Dual problem",
+	"cn": "对偶问题",
+	"pages": "442,446"
+},
+{
+	"en": "Economics",
+	"cn": "经济学",
+	"pages": "435,439"
+},
+{
+	"en": "Eigenvalue",
+	"cn": "特征值",
+	"pages": "283,287,374,499"
+},
+{
+	"en": "Eigenvalue changes",
+	"cn": "特征值变换",
+	"pages": "439"
+},
+{
+	"en": "Eigenvalues of ",
+	"cn": "的特征值",
+	"pages": "284,294,300"
+},
+{
+	"en": "Eigenvalues of ",
+	"cn": "的特征值",
+	"pages": "297"
+},
+{
+	"en": "Eigenvalues of ",
+	"cn": "的特征值",
+	"pages": "362"
+},
+{
+	"en": "Eigenvector basis",
+	"cn": "基底的特征向量",
+	"pages": "399"
+},
+{
+	"en": "Eigenvectors",
+	"cn": "特征向量",
+	"pages": "283,287,374"
+},
+{
+	"en": "Elimination",
+	"cn": "消元法",
+	"pages": "45-66,83,86,135"
+},
+{
+	"en": "Ellipse",
+	"cn": "椭圆",
+	"pages": "290,346,366,382"
+},
+{
+	"en": "Energy",
+	"cn": "能量",
+	"pages": "343,409"
+},
+{
+	"en": "Engineering",
+	"cn": "工程",
+	"pages": "409,419"
+},
+{
+	"en": "Error",
+	"cn": "误差",
+	"pages": "211,218,219,225,481,000"
+},
+{
+	"en": "Error equation",
+	"cn": "误差方程",
+	"pages": "477"
+},
+{
+	"en": "Euler angles",
+	"cn": "欧拉角",
+	"pages": "474"
+},
+{
+	"en": "Euler’s formula",
+	"cn": "欧拉公式",
+	"pages": "311,426,430,497"
+},
+{
+	"en": "Even",
+	"cn": "偶数",
+	"pages": "113,246,258,452"
+},
+{
+	"en": "Exponential",
+	"cn": "指数的",
+	"pages": "314,319,327"
+},
+{
+	"en": "Factorization",
+	"cn": "因式分解",
+	"pages": "95,110,235,348,370,300"
+},
+{
+	"en": "False proof",
+	"cn": "假证明",
+	"pages": "305,338"
+},
+{
+	"en": "Fast Fourier Transform",
+	"cn": "快速傅立叶变换",
+	"pages": "393,493,511,565"
+},
+{
+	"en": "Feasible set",
+	"cn": "可行集",
+	"pages": "440,441"
+},
+{
+	"en": "FFT(see Fast ",
+	"cn": "见快速傅里叶变换",
+	"pages": "509-514"
+},
+{
+	"en": "Fibonacci",
+	"cn": "菲波那契",
+	"pages": "75,266,268,301,302,300,000"
+},
+{
+	"en": "Finite difference",
+	"cn": "有限差分",
+	"pages": "315-317,417"
+},
+{
+	"en": "Finite elements",
+	"cn": "有限元",
+	"pages": "412,419"
+},
+{
+	"en": "First-order system",
+	"cn": "一阶方程组",
+	"pages": "315,326"
+},
+{
+	"en": "Fixed-free",
+	"cn": "固定-自由",
+	"pages": "410,414,417,419"
+},
+{
+	"en": "Force balance",
+	"cn": "平衡力",
+	"pages": "412"
+},
+{
+	"en": "Forward difference",
+	"cn": "前向差分",
+	"pages": "30"
+},
+{
+	"en": "Four Fundamental Subspaces",
+	"cn": "四个基本子空间",
+	"pages": "184-199,368,424,507"
+},
+{
+	"en": "Fourier series",
+	"cn": "傅立叶序列",
+	"pages": "233,448,450,452"
+},
+{
+	"en": "Fourier Transform",
+	"cn": "傅立叶变换",
+	"pages": "393,509-514"
+},
+{
+	"en": "Fredholm Alternative",
+	"cn": "弗雷德霍姆择一",
+	"pages": "203"
+},
+{
+	"en": "Free",
+	"cn": "自由",
+	"pages": "133,135,137,144,146,000"
+},
+{
+	"en": "Full column rank",
+	"cn": "列满秩",
+	"pages": "157,170,405"
+},
+{
+	"en": "Full row rank",
+	"cn": "行满秩",
+	"pages": "159,405"
+},
+{
+	"en": "Function space",
+	"cn": "函数空间",
+	"pages": "121,448,449"
+},
+{
+	"en": "Fundamental Theorem of Linear Algebra ",
+	"cn": "线性代数基本定理",
+	"pages": "188,198,368"
+},
+{
+	"en": "Gaussian elimination",
+	"cn": "高斯消元法",
+	"pages": "45,49,135"
+},
+{
+	"en": "Gaussian probability distribution",
+	"cn": "高斯概率分布",
+	"pages": "455"
+},
+{
+	"en": "Gauss-Jordan",
+	"cn": "高斯-约当",
+	"pages": "83,84,91,469"
+},
+{
+	"en": "Gauss-Seidel",
+	"cn": "高斯-塞德尔",
+	"pages": "481,484,485,489"
+},
+{
+	"en": "Gene expression data",
+	"cn": "基因表达数据",
+	"pages": "457"
+},
+{
+	"en": "Geometric series",
+	"cn": "等比数列",
+	"pages": "436"
+},
+{
+	"en": "Gershgorin circles",
+	"cn": "格尔什戈林圆",
+	"pages": "491"
+},
+{
+	"en": "Gibbs phenomenon",
+	"cn": "吉布斯效应",
+	"pages": "451"
+},
+{
+	"en": "Givens rotation",
+	"cn": "吉文斯旋转",
+	"pages": "471"
+},
+{
+	"en": "Google",
+	"cn": "谷歌",
+	"pages": "368,369,434"
+},
+{
+	"en": "Gram-Schmidt",
+	"cn": "格拉姆-施密特",
+	"pages": "223,234,236,241,370,000"
+},
+{
+	"en": "Graph",
+	"cn": "图表",
+	"pages": "74,143,307,311,420,400,000"
+},
+{
+	"en": "Group",
+	"cn": "群",
+	"pages": "119,354"
+},
+{
+	"en": "Half-plane",
+	"cn": "半平面",
+	"pages": "7"
+},
+{
+	"en": "Heat equation",
+	"cn": "热方程式",
+	"pages": "322,323"
+},
+{
+	"en": "Heisenberg",
+	"cn": "海森堡",
+	"pages": "305,310"
+},
+{
+	"en": "Hilbert space",
+	"cn": "希尔伯特空间",
+	"pages": "447,449"
+},
+{
+	"en": "Hooke’s Law",
+	"cn": "虎克定律",
+	"pages": "410,412"
+},
+{
+	"en": "Householder reflections",
+	"cn": "镜像变换",
+	"pages": "237,469,472"
+},
+{
+	"en": "Hyperplane",
+	"cn": "超平面",
+	"pages": "30,42"
+},
+{
+	"en": "Ill-conditioned matrix",
+	"cn": "病态矩阵",
+	"pages": "371,473,474"
+},
+{
+	"en": "Imaginary",
+	"cn": "虚数",
+	"pages": "289"
+},
+{
+	"en": "Independent",
+	"cn": "独立的",
+	"pages": "26,27,134,168,200,300"
+},
+{
+	"en": "Initial value",
+	"cn": "初值",
+	"pages": "313"
+},
+{
+	"en": "Inner product",
+	"cn": "内积",
+	"pages": "11,56,108,448,502,506"
+},
+{
+	"en": "Input and output basis",
+	"cn": "基底输入输出",
+	"pages": "399"
+},
+{
+	"en": "Integral",
+	"cn": "积分",
+	"pages": "24,385,386"
+},
+{
+	"en": "Interior point method",
+	"cn": "内点法",
+	"pages": "445"
+},
+{
+	"en": "Intersection of spaces",
+	"cn": "交空间",
+	"pages": "129,183"
+},
+{
+	"en": "Inverse matrix",
+	"cn": "逆矩阵",
+	"pages": "24,81,270"
+},
+{
+	"en": "Inverse of",
+	"cn": "的逆",
+	"pages": "82"
+},
+{
+	"en": "Invertible",
+	"cn": "可逆的",
+	"pages": "86,173,200,248"
+},
+{
+	"en": "Iteration",
+	"cn": "迭代",
+	"pages": "481,482,484,489,492"
+},
+{
+	"en": "Jacobi",
+	"cn": "雅可比",
+	"pages": "481,483,485,489"
+},
+{
+	"en": "Jordan form",
+	"cn": "约当型",
+	"pages": "356,357,358,361,482"
+},
+{
+	"en": "Kalman filter",
+	"cn": "卡尔曼滤波器",
+	"pages": "93,214"
+},
+{
+	"en": "Kernel",
+	"cn": "核",
+	"pages": "377,380"
+},
+{
+	"en": "Kirchhoff’s Laws",
+	"cn": "基尔霍夫定律",
+	"pages": "143,189,420,424-427"
+},
+{
+	"en": "Krylov",
+	"cn": "克雷洛夫",
+	"pages": "491,492"
+},
+{
+	"en": "norm",
+	"cn": "和",
+	"pages": "225,480"
+},
+{
+	"en": "Lagrange multiplier",
+	"cn": "拉格朗日乘子",
+	"pages": "445"
+},
+{
+	"en": "Lanczos method",
+	"cn": "兰索斯方法",
+	"pages": "490,492"
+},
+{
+	"en": "LAPACK",
+	"cn": "线性代数软件包",
+	"pages": "98,237,486"
+},
+{
+	"en": "Leapfrog method",
+	"cn": "跳步法",
+	"pages": "317,329"
+},
+{
+	"en": "Least squares",
+	"cn": "最小平方",
+	"pages": "218,219,236,405,408,000"
+},
+{
+	"en": "Left nullspace",
+	"cn": "左零空间",
+	"pages": "184,186,192,425"
+},
+{
+	"en": "Left-inverse",
+	"cn": "左逆的",
+	"pages": "81,86,154,405"
+},
+{
+	"en": "Length",
+	"cn": "长度",
+	"pages": "12,232,447,448,501"
+},
+{
+	"en": "Line",
+	"cn": "线",
+	"pages": "34,40,221,474"
+},
+{
+	"en": "Line of springs",
+	"cn": "线弹簧",
+	"pages": "411"
+},
+{
+	"en": "Linear combination",
+	"cn": "线性组合",
+	"pages": "1,3"
+},
+{
+	"en": "Linear equation",
+	"cn": "线性方程",
+	"pages": "23"
+},
+{
+	"en": "Linear programming",
+	"cn": "线性规划",
+	"pages": "440"
+},
+{
+	"en": "Linear transformation",
+	"cn": "线性变换",
+	"pages": "44,375-398"
+},
+{
+	"en": "Linearity",
+	"cn": "线性关系",
+	"pages": "44,245,246"
+},
+{
+	"en": "Linearly independent",
+	"cn": "线性独立",
+	"pages": "26,134,168,169,200"
+},
+{
+	"en": "LINPACK",
+	"cn": "线性系统软件包",
+	"pages": "465"
+},
+{
+	"en": "Loop",
+	"cn": "环路",
+	"pages": "307,425,426"
+},
+{
+	"en": "Lower triangular",
+	"cn": "下三角",
+	"pages": "95"
+},
+{
+	"en": "Lucas numbers",
+	"cn": "卢卡斯数",
+	"pages": "306"
+},
+{
+	"en": "Matrix(see full page 570)",
+	"cn": "矩阵",
+	"pages": "22,384,387"
+},
+{
+	"en": "Matrix exponential",
+	"cn": "矩阵指数",
+	"pages": "314,319,327"
+},
+{
+	"en": "Matrix multiplication",
+	"cn": "矩阵乘法",
+	"pages": "58,59,67,389"
+},
+{
+	"en": "Matrix notation",
+	"cn": "矩阵记号",
+	"pages": "37"
+},
+{
+	"en": "Matrix space",
+	"cn": "矩阵空间",
+	"pages": "121,122,175,181,311"
+},
+{
+	"en": "-1,2,-1 matrix",
+	"-cn": "1，2，-1矩阵",
+	"pages": "106,167,261,265,349,000,000,000"
+},
+{
+	"en": "Adjacency, ",
+	"cn": "邻接矩阵",
+	"pages": "74,80,311,369"
+},
+{
+	"en": "All-ones",
+	"cn": "全1矩阵",
+	"pages": "251,262,307,348"
+},
+{
+	"en": "Augmented",
+	"cn": "增广矩阵",
+	"pages": "60,84,155"
+},
+{
+	"en": "Band",
+	"cn": "带状矩阵",
+	"pages": "99,468,469"
+},
+{
+	"en": "Block",
+	"cn": "分块矩阵",
+	"pages": "70,94,115,266,348"
+},
+{
+	"en": "Circulant",
+	"cn": "循环矩阵",
+	"pages": "507,515"
+},
+{
+	"en": "Coefficient",
+	"cn": "系数矩阵",
+	"pages": "33,36"
+},
+{
+	"en": "Cofactor matrix",
+	"cn": "伴随矩阵",
+	"pages": "270"
+},
+{
+	"en": "Companion",
+	"cn": "友矩阵",
+	"pages": "295,322"
+},
+{
+	"en": "Complex matrix",
+	"cn": "复矩阵",
+	"pages": "339,499"
+},
+{
+	"en": "Consumption",
+	"cn": "消费矩阵",
+	"pages": "435,436"
+},
+{
+	"en": "Covariance",
+	"cn": "协方差阵",
+	"pages": "228,453,455,456,458"
+},
+{
+	"en": "Cyclic",
+	"cn": "循环矩阵",
+	"pages": "25,93,374"
+},
+{
+	"en": "Derivative",
+	"cn": "导数矩阵",
+	"pages": "385"
+},
+{
+	"en": "Difference",
+	"cn": "差矩阵",
+	"pages": "22,87,412"
+},
+{
+	"en": "Echelon",
+	"cn": "梯矩阵",
+	"pages": "137,143"
+},
+{
+	"en": "Eigenvalue matrix",
+	"cn": "特征值矩阵",
+	"pages": "298"
+},
+{
+	"en": "Eigenvector matrix",
+	"cn": "特征向量矩阵",
+	"pages": "298"
+},
+{
+	"en": "Elimination",
+	"cn": "消元矩阵",
+	"pages": "57,63,149"
+},
+{
+	"en": "Exponential",
+	"cn": "指数矩阵",
+	"pages": "314,319,327"
+},
+{
+	"en": "First difference",
+	"cn": "一阶差分矩阵",
+	"pages": "22,373"
+},
+{
+	"en": "Fourier",
+	"cn": "傅里叶矩阵",
+	"pages": "394,493,505,510,511"
+},
+{
+	"en": "Hadamard",
+	"cn": "阿达马矩阵",
+	"pages": "238,280"
+},
+{
+	"en": "Hermitian",
+	"cn": "埃尔米特矩阵",
+	"pages": "339,340,501,503,506,000"
+},
+{
+	"en": "Hessenberg",
+	"cn": "黑森伯格矩阵",
+	"pages": "262,488,492"
+},
+{
+	"en": "Hilbert",
+	"cn": "希尔伯特矩阵",
+	"pages": "92,254,348"
+},
+{
+	"en": "House",
+	"cn": "宅矩阵",
+	"pages": "378,382"
+},
+{
+	"en": "Hypercube",
+	"cn": "超立方矩阵",
+	"pages": "73"
+},
+{
+	"en": "Identity",
+	"cn": "单位矩阵",
+	"pages": "37,42,57,390"
+},
+{
+	"en": "Incidence",
+	"cn": "关联矩阵",
+	"pages": "420,422,429"
+},
+{
+	"en": "Indefinite",
+	"cn": "不定矩阵",
+	"pages": "343"
+},
+{
+	"en": "Inverse",
+	"cn": "逆矩阵",
+	"pages": "24,81,270"
+},
+{
+	"en": "Invertible",
+	"cn": "可逆矩阵",
+	"pages": "27,83,86,112,408,574"
+},
+{
+	"en": "Jacobian",
+	"cn": "雅可比矩阵",
+	"pages": "274"
+},
+{
+	"en": "Jordan",
+	"cn": "若尔当矩阵",
+	"pages": "356,358,462,565"
+},
+{
+	"en": "Laplacian( Graph Laplacian)",
+	"cn": "（图）拉普拉斯矩阵",
+	"pages": "428"
+},
+{
+	"en": "Leslie",
+	"cn": "莱斯利矩阵",
+	"pages": "435,439"
+},
+{
+	"en": "Magic",
+	"cn": "奇幻矩阵",
+	"pages": "43"
+},
+{
+	"en": "Markov",
+	"cn": "马尔可夫矩阵",
+	"pages": "43,285,294,369,373,400,000"
+},
+{
+	"en": "Negative definite",
+	"cn": "负定矩阵",
+	"pages": "343"
+},
+{
+	"en": "Nondiagonalizable",
+	"cn": "不可对角化矩阵",
+	"pages": "299,304,309"
+},
+{
+	"en": "Normal",
+	"cn": "正规矩阵",
+	"pages": "341,508,565"
+},
+{
+	"en": "Northwest",
+	"cn": "西北矩阵",
+	"pages": "119"
+},
+{
+	"en": "Nullspace matrix",
+	"cn": "零空间矩阵",
+	"pages": "136,147"
+},
+{
+	"en": "Orthogonal",
+	"cn": "正交矩阵",
+	"pages": "231,252,289"
+},
+{
+	"en": "Pascal",
+	"cn": "帕斯卡矩阵",
+	"pages": "66,72,88,101,348,359"
+},
+{
+	"en": "Permutation",
+	"cn": "置换矩阵",
+	"pages": "59,111,116,183,297"
+},
+{
+	"en": "Pivot matrix",
+	"cn": "主矩阵",
+	"pages": "97,104"
+},
+{
+	"en": "Population",
+	"cn": "人口矩阵",
+	"pages": "435"
+},
+{
+	"en": "Positive matrix",
+	"cn": "正矩阵",
+	"pages": "413,431,434,436"
+},
+{
+	"en": "Positive definite",
+	"cn": "正定矩阵",
+	"pages": "343,344,351,409,475"
+},
+{
+	"en": "Projection",
+	"cn": "投影矩阵",
+	"pages": "206,208,210,233,285,000,000,000"
+},
+{
+	"en": "Pseudoinverse",
+	"cn": "伪逆矩阵",
+	"pages": "199,399,403,404,565"
+},
+{
+	"en": "Rank-one",
+	"cn": "秩1矩阵",
+	"pages": "145,152,294,311,363"
+},
+{
+	"en": "Reflection",
+	"cn": "反射矩阵",
+	"pages": "243,286,336,469,471"
+},
+{
+	"en": "Rotation",
+	"cn": "旋转矩阵",
+	"pages": "231,289,460,471"
+},
+{
+	"en": "Saddle-point",
+	"cn": "鞍点矩阵",
+	"pages": "115,343"
+},
+{
+	"en": "Second derivative (Hessian)",
+	"cn": "二阶导数（黑塞）矩阵",
+	"pages": "349,353"
+},
+{
+	"en": "Second difference (1,-2,1)",
+	"cn": "二阶差分（1，-2，1）矩阵",
+	"pages": "322,373,417"
+},
+{
+	"en": "Semidefinite",
+	"cn": "半定矩阵",
+	"pages": "345,415"
+},
+{
+	"en": "Shearing",
+	"cn": "剪切矩阵",
+	"pages": "379"
+},
+{
+	"en": "Similar",
+	"cn": "相似矩阵",
+	"pages": "355-362,400"
+},
+{
+	"en": "Sine matrix",
+	"cn": "正弦矩阵",
+	"pages": "349,354,373"
+},
+{
+	"en": "Singular",
+	"cn": "奇异矩阵",
+	"pages": "27,416,574"
+},
+{
+	"en": "Skew-symmetric",
+	"cn": "反称矩阵",
+	"pages": "289,320,327,338,341"
+},
+{
+	"en": "Sparse",
+	"cn": "稀疏矩阵",
+	"pages": "100,470,474,465"
+},
+{
+	"en": "Stable, ",
+	"cn": "稳定矩阵",
+	"pages": "318"
+},
+{
+	"en": "Stiffness",
+	"cn": "刚性矩阵",
+	"pages": "317,409,412,419"
+},
+{
+	"en": "Stoichiometric",
+	"cn": "化学计量矩阵",
+	"pages": "430"
+},
+{
+	"en": "Sudoku",
+	"cn": "数独矩阵",
+	"pages": "44"
+},
+{
+	"en": "Sum matrix",
+	"cn": "和矩阵",
+	"pages": "24,87,271"
+},
+{
+	"en": "Symmetric",
+	"cn": "对称矩阵",
+	"pages": "109,330-341"
+},
+{
+	"en": "Translation",
+	"cn": "平移矩阵",
+	"pages": "459,463"
+},
+{
+	"en": "Triangular",
+	"cn": "三角形矩阵",
+	"pages": "95,236,247,271,289,300"
+},
+{
+	"en": "Tridiagonal",
+	"cn": "三对角矩阵",
+	"pages": "85,100,265,413,468,400"
+},
+{
+	"en": "Unitary",
+	"cn": "酉矩阵",
+	"pages": "504,505,506,510"
+},
+{
+	"en": "Vandermonde",
+	"cn": "范德蒙德矩阵",
+	"pages": "226,253,266,511"
+},
+{
+	"en": "Wavelet",
+	"cn": "小波矩阵",
+	"pages": "242"
+},
+{
+	"en": "Mean",
+	"cn": "均值",
+	"pages": "228,453-457"
+},
+{
+	"en": "Minimum",
+	"cn": "极小值",
+	"pages": "349"
+},
+{
+	"en": "Multigrid",
+	"cn": "多重网格",
+	"pages": "485"
+},
+{
+	"en": "Multiplication by columns",
+	"cn": "按列相乘",
+	"pages": "23,36"
+},
+{
+	"en": "Multiplication by rows",
+	"cn": "按行相乘",
+	"pages": "36"
+},
+{
+	"en": "Multiplication count",
+	"cn": "相乘次数",
+	"pages": "68,80,99,467,469"
+},
+{
+	"en": "Multiplicity",
+	"cn": "重数",
+	"pages": "304,358"
+},
+{
+	"en": "Multiplier",
+	"cn": "乘子",
+	"pages": "45,46,50,96"
+},
+{
+	"en": "choose",
+	"cn": "选",
+	"pages": "442,454"
+},
+{
+	"en": "-dimensional space",
+	"cn": "维空间",
+	"pages": "1,120"
+},
+{
+	"en": "Network",
+	"cn": "网络",
+	"pages": "420,427"
+},
+{
+	"en": "Newton’s method",
+	"cn": "牛顿法",
+	"pages": "445"
+},
+{
+	"en": "No solution",
+	"cn": "无解",
+	"pages": "26,39,46,192"
+},
+{
+	"en": "Nondiagonalizable",
+	"cn": "不可对角化",
+	"pages": "304,309"
+},
+{
+	"en": "Norm",
+	"cn": "范数",
+	"pages": "12,475,476,479,480,400"
+},
+{
+	"en": "Normal distribution",
+	"cn": "正态分布",
+	"pages": "455"
+},
+{
+	"en": "Normal equation",
+	"cn": "正规方程",
+	"pages": "210,211,453"
+},
+{
+	"en": "Normal matrix",
+	"cn": "正规矩阵",
+	"pages": "341,508,565"
+},
+{
+	"en": "Nullspace",
+	"cn": "零空间",
+	"pages": "132,185"
+},
+{
+	"en": "Odd permutation",
+	"cn": "奇置换",
+	"pages": "113"
+},
+{
+	"en": "Ohm’s Law",
+	"cn": "欧姆定律",
+	"pages": "426"
+},
+{
+	"en": "Orthogonality",
+	"cn": "正交性",
+	"pages": "14,195,448"
+},
+{
+	"en": "Orthogonal complement",
+	"cn": "正交补",
+	"pages": "197,198,200"
+},
+{
+	"en": "Orthogonal spaces",
+	"cn": "正交空间",
+	"pages": "197"
+},
+{
+	"en": "Orthogonal subspaces",
+	"cn": "正交子空间",
+	"pages": "195,196,204"
+},
+{
+	"en": "Orthogonal vectors",
+	"cn": "正交向量",
+	"pages": "14,195"
+},
+{
+	"en": "Orthonormal",
+	"cn": "规范正交的",
+	"pages": "230,234,240,504"
+},
+{
+	"en": "Orthonormal basis",
+	"cn": "规范正交基",
+	"pages": "367,368,449"
+},
+{
+	"en": "Orthonormal eigenvectors",
+	"cn": "规范正交特征向量",
+	"pages": "203,307,330,332,339,000,000"
+},
+{
+	"en": "Parabola",
+	"cn": "抛物线",
+	"pages": "224"
+},
+{
+	"en": "Parallelogram",
+	"cn": "平行四边形",
+	"pages": "3,8,272,383"
+},
+{
+	"en": "Partial pivoting",
+	"cn": "部分主元消元（法）",
+	"pages": "113,466,467"
+},
+{
+	"en": "Particular solution",
+	"cn": "特解",
+	"pages": "155,156,159"
+},
+{
+	"en": "Permutation",
+	"cn": "置换",
+	"pages": "44,47,231,257"
+},
+{
+	"en": "Perpendicular(see Orthogonality)",
+	"cn": "垂直",
+	"pages": "12,14"
+},
+{
+	"en": "Perpendicular eigenvectors",
+	"cn": "垂直特征向量",
+	"pages": "203,339"
+},
+{
+	"en": "Perron-Frobenius Theorem",
+	"cn": "佩龙-弗罗贝尼乌斯定理",
+	"pages": "434"
+},
+{
+	"en": "Pivcol,",
+	"cn": "主列",
+	"pages": "146"
+},
+{
+	"en": "Pivot",
+	"cn": "主元",
+	"pages": "45,46,55,256,333,351,466"
+},
+{
+	"en": "Pivot columns",
+	"cn": "主列",
+	"pages": "133,135,138,144,146,000,000"
+},
+{
+	"en": "Pivot rows",
+	"cn": "主行",
+	"pages": "185"
+},
+{
+	"en": "Pivot variable",
+	"cn": "主变元",
+	"pages": "135,155"
+},
+{
+	"en": "Pixel,",
+	"cn": "像素",
+	"pages": "364,462"
+},
+{
+	"en": "Plane",
+	"cn": "平面",
+	"pages": "6,26"
+},
+{
+	"en": "Plane rotation,",
+	"cn": "平面旋转",
+	"pages": "471"
+},
+{
+	"en": "Poisson distribution,",
+	"cn": "泊松分布",
+	"pages": "454"
+},
+{
+	"en": "Polar coordinates",
+	"cn": "极坐标",
+	"pages": "274,281,495-497"
+},
+{
+	"en": "Polar decomposition",
+	"cn": "极分解",
+	"pages": "402,403"
+},
+{
+	"en": "Positive eigenvalues",
+	"cn": "正特征值",
+	"pages": "342"
+},
+{
+	"en": "Positive pivots",
+	"cn": "正主元",
+	"pages": "343"
+},
+{
+	"en": "Potential",
+	"cn": "位势",
+	"pages": "423"
+},
+{
+	"en": "Power method",
+	"cn": "（乘）幂法",
+	"pages": "487"
+},
+{
+	"en": "Preconditioner",
+	"cn": "预调节器",
+	"pages": "481,486"
+},
+{
+	"en": "Principal axes",
+	"cn": "主轴",
+	"pages": "330"
+},
+{
+	"en": "Principal Component Analysis",
+	"cn": "主成分分析",
+	"pages": "457"
+},
+{
+	"en": "Probability",
+	"cn": "概率",
+	"pages": "432,453,454"
+},
+{
+	"en": "Product of pivots",
+	"cn": "主元的积",
+	"pages": "63,85,244,333"
+},
+{
+	"en": "Projection",
+	"cn": "投影",
+	"pages": "206-217,219,233"
+},
+{
+	"en": "Projection on line",
+	"cn": "线上投影",
+	"pages": "207,208"
+},
+{
+	"en": "Projection on subspace",
+	"cn": "子空间上投影",
+	"pages": "209,210"
+},
+{
+	"en": "Projective space",
+	"cn": "射影空间",
+	"pages": "460"
+},
+{
+	"en": "Pseudoniverse",
+	"cn": "伪逆",
+	"pages": "199,399,403,404,407"
+},
+{
+	"en": "Pythagoras",
+	"cn": "毕达哥拉斯",
+	"pages": "14,20"
+},
+{
+	"en": "factorization",
+	"cn": "分解",
+	"pages": "243,564"
+},
+{
+	"en": "method",
+	"cn": "方法",
+	"pages": "360,487,490"
+},
+{
+	"en": "Random",
+	"cn": "随机",
+	"pages": "21,55,348,373,562"
+},
+{
+	"en": "Range",
+	"cn": "值域，区域",
+	"pages": "376,377,380"
+},
+{
+	"en": "Rank",
+	"cn": "秩",
+	"pages": "144,159,160,166"
+},
+{
+	"en": "Rank of",
+	"cn": "的秩",
+	"pages": "153,194,217"
+},
+{
+	"en": "Rank one",
+	"cn": "秩1",
+	"pages": "145,150,152,189"
+},
+{
+	"en": "Rayleigh quotient",
+	"Rcn": "ayleigh商",
+	"pages": "476"
+},
+{
+	"en": "Real eigenvalues",
+	"cn": "实特征值",
+	"pages": "330,331"
+},
+{
+	"en": "Recursion",
+	"cn": "递归，递推",
+	"pages": "213,228,260,392,513"
+},
+{
+	"en": "Reduced cost",
+	"cn": "缩减费用",
+	"pages": "443,444"
+},
+{
+	"en": "Reduced echelon form(rref)",
+	"cn": "缩减梯形式",
+	"pages": "85,134,138,148, 166,564"
+},
+{
+	"en": "Reflection",
+	"cn": "镜射（反射）",
+	"pages": "232,243,286,336,471"
+},
+{
+	"en": "Regression",
+	"cn": "回归",
+	"pages": "453"
+},
+{
+	"en": "Repeated eigenvalues",
+	"cn": "重特征值",
+	"pages": "299,320,322"
+},
+{
+	"en": "Residual",
+	"cn": "剩余（的）；残差",
+	"pages": "222,481,492"
+},
+{
+	"en": "Reverse order",
+	"cn": "逆序",
+	"pages": "82,107"
+},
+{
+	"en": "Right angle(see Orthogonality)",
+	"cn": "直角",
+	"pages": "14"
+},
+{
+	"en": "Right hand rule",
+	"cn": "右手定则",
+	"pages": "276"
+},
+{
+	"en": "Right-inverse",
+	"cn": "右逆",
+	"pages": "81,86,154,405"
+},
+{
+	"en": "Rotation",
+	"cn": "旋转",
+	"pages": "2,321,289,460,471,470"
+},
+{
+	"en": "Roundoff error",
+	"cn": "舍入误差",
+	"pages": "371,466,477,478"
+},
+{
+	"en": "Row exchange",
+	"cn": "行交换",
+	"pages": "47,59,113,245,253"
+},
+{
+	"en": "Row picture",
+	"cn": "行图",
+	"pages": "31,34,40"
+},
+{
+	"en": "Row reduced echelon form",
+	"cn": "行缩减梯形式",
+	"pages": "85"
+},
+{
+	"en": "Row space ",
+	"cn": "行空间",
+	"pages": "171,184"
+},
+{
+	"en": "Saddle",
+	"cn": "鞍点",
+	"pages": "353"
+},
+{
+	"en": "Scalar",
+	"cn": "标量",
+	"pages": "2,32"
+},
+{
+	"en": "Schur complement",
+	"Scn": "chur补",
+	"pages": "72,94,348"
+},
+{
+	"en": "Schur’s Theorem",
+	"Scn": "chur定理",
+	"pages": "335,341"
+},
+{
+	"en": "Schwarz inequality",
+	"cn": "施瓦茨不等式",
+	"pages": "16,20,447"
+},
+{
+	"en": "Search engine",
+	"cn": "搜索引擎",
+	"pages": "373"
+},
+{
+	"en": "Second difference",
+	"cn": "二阶差分",
+	"pages": "316,322,336"
+},
+{
+	"en": "Second order equation",
+	"cn": "二阶方程",
+	"pages": "314-317"
+},
+{
+	"en": "Shift",
+	"cn": "移位",
+	"pages": "375"
+},
+{
+	"en": "Simplex method",
+	"cn": "单纯形法",
+	"pages": "440,443"
+},
+{
+	"en": "Singular value",
+	"cn": "奇异值",
+	"pages": "363,365,371,476"
+},
+{
+	"en": "Singular Value Decomposition, see SVD",
+	"cn": "奇异值分解",
+	"pages": ""
+},
+{
+	"en": "Singular vector",
+	"cn": "奇异向量",
+	"pages": "363,408"
+},
+{
+	"en": "Skew-symmetric",
+	"cn": "反对称",
+	"pages": "289,320,327,338,341"
+},
+{
+	"en": "Solvable",
+	"cn": "可解的",
+	"pages": "124,157,163"
+},
+{
+	"en": "Span",
+	"cn": "生成，张成",
+	"pages": "125,131,168,171"
+},
+{
+	"en": "Special solution",
+	"cn": "特解",
+	"pages": "132,136,146,147"
+},
+{
+	"en": "Spectral radius",
+	"cn": "谱半径",
+	"pages": "479,480,482"
+},
+{
+	"en": "Spectral Theorem",
+	"cn": "谱定理",
+	"pages": "330,335,564"
+},
+{
+	"en": "Spiral",
+	"cn": "螺线",
+	"pages": "316"
+},
+{
+	"en": "Square root",
+	"cn": "平方根",
+	"pages": "402"
+},
+{
+	"en": "Square wave",
+	"cn": "方波",
+	"pages": "449,451"
+},
+{
+	"en": "Stability",
+	"cn": "稳定性",
+	"pages": "316-318,329"
+},
+{
+	"en": "Standard basis",
+	"cn": "标准基",
+	"pages": "172,388"
+},
+{
+	"en": "Statistics",
+	"cn": "统计",
+	"pages": "228,453"
+},
+{
+	"en": "Steady state",
+	"cn": "定态",
+	"pages": "325,431,433,434"
+},
+{
+	"en": "Stretching",
+	"cn": "伸缩变换",
+	"pages": "366,411,415"
+},
+{
+	"en": "Submatrix",
+	"cn": "子矩阵",
+	"pages": "106,153"
+},
+{
+	"en": "Subspace",
+	"cn": "子空间",
+	"pages": "121,122,127,184-194"
+},
+{
+	"en": "Sum of spaces",
+	"cn": "空间的和",
+	"pages": "131,183"
+},
+{
+	"en": "Sum of squares",
+	"cn": "平方和",
+	"pages": "344,347,350"
+},
+{
+	"en": "Supercomputer",
+	"cn": "超级计算机",
+	"pages": "465"
+},
+{
+	"en": "SVD",
+	"cn": "奇异值分解",
+	"pages": "363,368,370,383,399,000,000"
+},
+{
+	"en": "Teaching Code",
+	"cn": "教学代码",
+	"pages": "99,149,566"
+},
+{
+	"en": "Toeplitz",
+	"cn": "特普利茨",
+	"pages": "106,474"
+},
+{
+	"en": "Trace",
+	"cn": "迹",
+	"pages": "288,289,295,309,318"
+},
+{
+	"en": "Transformation",
+	"cn": "变换",
+	"pages": "375"
+},
+{
+	"en": "Transpose",
+	"cn": "转置",
+	"pages": "107,249,502"
+},
+{
+	"en": "Transpose of AB and A^{-1} ",
+	"cn": "B和A^{-1}的转置",
+	"pages": "107"
+},
+{
+	"en": "Tree",
+	"cn": "树",
+	"pages": "307,423"
+},
+{
+	"en": "Triangle",
+	"cn": "三角形",
+	"pages": "10,271"
+},
+{
+	"en": "Triangle inequality",
+	"cn": "三角不等式",
+	"pages": "16,18,20,480"
+},
+{
+	"en": "Tridiagonal(see Matrix)",
+	"cn": "三对角",
+	"pages": ""
+},
+{
+	"en": "Triple product, ",
+	"cn": "三重积",
+	"pages": "276,282"
+},
+{
+	"en": "Uncertainty,",
+	"cn": "不确定性",
+	"pages": "305,310"
+},
+{
+	"en": "Unique solution",
+	"cn": "唯一解",
+	"pages": "157"
+},
+{
+	"en": "Unit vector",
+	"cn": "单位向量",
+	"pages": "12,13,230,234,307"
+},
+{
+	"en": "Upper triangular",
+	"cn": "上三角",
+	"pages": "45,236"
+},
+{
+	"en": "Variance",
+	"cn": "方差",
+	"pages": "228,453,454"
+},
+{
+	"en": "Vector",
+	"cn": "向量",
+	"pages": "2,3,121,447"
+},
+{
+	"en": "Vector addition",
+	"cn": "向量加法",
+	"pages": "2,3,33,121"
+},
+{
+	"en": "Vector space",
+	"cn": "向量空间",
+	"pages": "120,121,127"
+},
+{
+	"en": "Voltage",
+	"cn": "电势",
+	"pages": "423"
+},
+{
+	"en": "Volume",
+	"cn": "体积",
+	"pages": "245,274,281"
+},
+{
+	"en": "Wave equation",
+	"cn": "波动方程",
+	"pages": "322,323"
+},
+{
+	"en": "Wavelet",
+	"cn": "小波",
+	"pages": "391"
+},
+{
+	"en": "Weighted least squares, ",
+	"cn": "加权最小二乘法",
+	"pages": "453,456,458"
+},
+{
+	"en": "Woodbury-Morrison, ",
+	"cn": "伍德伯里-莫里森",
+	"pages": "93"
+},
+{
+	"en": "Words",
+	"cn": "字",
+	"pages": "75,80"
+}]
