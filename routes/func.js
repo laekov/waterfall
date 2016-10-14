@@ -7,6 +7,7 @@ var barr = require('../modules/barr');
 var cmdList = [
 	require('../modules/blog'),
 	require('../modules/dash'),
+	require('../modules/refer')
 ];
 
 router.post('/wechat/get', function(req, res) {
