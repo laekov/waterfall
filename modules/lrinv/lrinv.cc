@@ -1,4 +1,4 @@
-///under GPLV3 LuRui
+///under GPLV3 by LuRui
 #include<cstdio>
 #include<iostream>
 #include<cmath>
@@ -172,7 +172,10 @@ int main()
                 frprint(coef[i][j + n]);
                 cout << "\t";
             }
-            cout << "\n";
+			if (i + 1 < n) 
+			{
+				cout << "\n";
+			}
         }
     }
     else

@@ -11,10 +11,22 @@ module.exports.deal = function(req, cmd, callback) {
     for (var i = 1; cmd[i]; ++ i) {
         txt += ' ' + cmd[i];
     }
-    fs.writeFileSync(path.resolve(__dirname, '.tmpin'), txt);
+    var inputFilePath = path.resolve(__dirname, '.tmpin');
+    var execPath = path.resolve(__dirname, 'lrinv');
+    fs.writeFileSync(inputFilePath, txt);
     try {
-        cp.execSync(path.resolve(__dirname, 'lrinv') + ' <.tmpin >.tmpout');
-        callback(String(fs.readFileSync(path.resolve(__dirname, '.tmpout'))));
+        cp.exec(execPath + ' <.tmpin', {
+            cwd: __dirname, 
+            timeout: 1000
+        }, function(error, stdout, stderr) {
+            if (error) {
+                return callback(String(error));
+            }
+            if (stderr) {
+                return callback(String(stderr));
+            }
+            return callback(String(stdout));
+        });
     } catch (error) {
         callback('Error: ' + error);
     }
