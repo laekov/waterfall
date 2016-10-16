@@ -152,11 +152,16 @@ int main()
     cin >> n;
     for(int i = 0; i < n; i++)
         for(int j = 0; j < n; j++)
-        {
-            cin >> coef[i][j].up;
-            coef[i][j].down = 1;
+		{
+			char s[100];
+            scanf("%s",&s);
+            sscanf(s,"%d",&coef[i][j].up);
+            if(strchr(s,'/'))
+                sscanf(strchr(s,'/')+1,"%d",&coef[i][j].down);
+            else
+                coef[i][j].down = 1;
             coef[i][n+j].down = 1;
-            coef[i][n+j].up = (i ==j) ? 1 : 0;
+            coef[i][n+j].up = (i == j) ? 1 : 0;
         }
     /*for(int i = 0;i < n; i++)
         {
