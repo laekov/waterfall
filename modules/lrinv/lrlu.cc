@@ -175,7 +175,6 @@ int main()
             }
             cout << "\n";
         }
-            cout << "\n";
         cout << "The Upper Maxtrix U is:" << endl;
         for(int i = 0;i < n; i++)
         {
@@ -196,7 +195,7 @@ int main()
         if(!ff) cout << "&The P is the identity maxtrix";
         else
         {
-           cout << "PA=LU,the P is:";
+           cout << "PA=LU,the P is:" << endl;
            for(int i = 0; i < n; ++i)
             {
                 for(int j = 0; j < n; ++j)
