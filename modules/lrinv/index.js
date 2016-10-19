@@ -3,7 +3,7 @@ var cp = require('child_process');
 var path = require('path');
 
 module.exports.own = function(cmdl) {
-    return cmdl == 'lrinv';
+    return cmdl == 'lrinv' || cmdl == 'lrlu';
 };
 
 module.exports.deal = function(req, cmd, callback) {
@@ -12,7 +12,7 @@ module.exports.deal = function(req, cmd, callback) {
         txt += ' ' + cmd[i];
     }
     var inputFilePath = path.resolve(__dirname, '.tmpin');
-    var execPath = path.resolve(__dirname, 'lrinv');
+    var execPath = path.resolve(__dirname, cmd[0]);
     fs.writeFileSync(inputFilePath, txt);
     try {
         cp.exec(execPath + ' <.tmpin', {
