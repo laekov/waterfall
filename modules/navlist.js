@@ -32,6 +32,7 @@ ret.generate = function(user, done) {
 		});
 		access.getDoc('u_' + user.username, function(doc) {
 			if (doc) {
+				console.log('doc == ' + doc.list);
 				if (doc.list.indexOf('rounds') != -1) {
 					res.push({
 						'text': 'Manage rooms',
@@ -44,7 +45,7 @@ ret.generate = function(user, done) {
 						'href': '/access/manage'
 					});
 				}	
-				if (doc.list.indexOf('access') != -1) {
+				if (doc.list.indexOf('blog') != -1) {
 					res.push({
 						'text': 'Edit blog',
 						'href': '/blog/edit'
