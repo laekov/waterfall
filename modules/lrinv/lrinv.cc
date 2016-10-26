@@ -1,4 +1,4 @@
-/* under GPLV3 
+/* under GPLV3
  * codeli	by	LuRui	@Oct.14 2016
  * modified by	laekov	@Oct.14 2016
  */
@@ -108,7 +108,7 @@ int n;
                 }
             }
             //cout << "safe";
-	    if(!coef[i][i]) return false;
+	    if(!coef[i][i].up) return false;
             if(flag)
                 for(j = i + 1; j < n; ++j)
                 {
@@ -182,7 +182,7 @@ int main()
             {
                 frprint(coef[i][j + n]);
             }
-			if (i + 1 < n) 
+			if (i + 1 < n)
 			{
 				cout << "\n";
 			}
