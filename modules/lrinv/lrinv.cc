@@ -108,6 +108,7 @@ int n;
                 }
             }
             //cout << "safe";
+	    if(!coef[i][i]) return false;
             if(flag)
                 for(j = i + 1; j < n; ++j)
                 {
