@@ -10,9 +10,9 @@ module.exports.deal = function(req, cmd, callback) {
     Hlrec.findOne({
         userId: userId
     }, function(err, doc) {
-        if (err || !doc || doc.lifeTime > Date.now()) {
+        if (err || !doc || doc.lifeTime < Date.now()) {
             var newStr = generator.gen();
-            var newDate = Date.now();
+            var newDate = new Date();
             newDate.setHours(0);
             newDate.setMinutes(0);
             newDate.setSeconds(0);
@@ -22,16 +22,16 @@ module.exports.deal = function(req, cmd, callback) {
             }, {
                 $set: {
                     message: newStr,
-                    lifeTime: newDate.time() + 86400000
+                    lifeTime: newDate.getTime() + 86400000
                 }
             }, {
                 upsert: true
             }, function(err) {
                 callback(newStr);
             });
-            return callback(newStr);
-        }
-        callback(doc.message);
+		} else {
+			callback(doc.message);
+		}
     });
 };
 

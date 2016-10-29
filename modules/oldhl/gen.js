@@ -1,4 +1,5 @@
-var fs = require("fs");
+var fs = require('fs');
+var path = require('path');
 
 var randInt = function(x) {
     return Math.floor(Math.random() * x);
@@ -7,7 +8,7 @@ var randInt = function(x) {
 module.exports.gen = function() {
     var data;
     try {
-        data = JSON.parse(String(fs.readFileSync('./data.json')));
+        data = JSON.parse(String(fs.readFileSync(path.resolve(__dirname, 'data.json'))));
     } catch (error) {
         return "Error: " + error;
     }
@@ -38,19 +39,13 @@ module.exports.gen = function() {
     if (res.good) {
         ans += '\n宜: ';
         for (var i in res.a) {
-            if (i) {
-                ans += ', ';
-            }
-            ans += res.a[i];
+            ans += ' ' + res.a[i];
         }
     }
     if (res.bad) {
         ans += '\n不宜: ';
         for (var i in res.b) {
-            if (i) {
-                ans += ', ';
-            }
-            ans += res.b[i];
+            ans += ' ' + res.b[i];
         }
     }
     return ans;

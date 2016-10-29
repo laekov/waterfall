@@ -100,11 +100,11 @@ int n, no[MAXN], no1[MAXN];
             if((coef[i][i].up) == 0)
             {
                 //cout << "safe2" << endl;
-                flag = false; cout << "change" << endl;
+                flag = false; // cout << "change" << endl;
                 for(j = i + 1; j < n; ++j)
                 if(coef[j][i].up != 0)
                 {
-                    cout << "change" << i << " " << j << endl;
+                //    cout << "change" << i << " " << j << endl;
                     permutation(i, j);
                     flag = true;
                     break;
