@@ -9,6 +9,7 @@ var cmdList = [
 	require('../modules/dash'),
 	require('../modules/refer'),
 	require('../modules/lrinv'),
+	require('../modules/oldhl'),
 ];
 
 router.post('/wechat/get', function(req, res) {
