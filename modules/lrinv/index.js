@@ -3,7 +3,7 @@ var cp = require('child_process');
 var path = require('path');
 
 module.exports.own = function(cmdl) {
-    return cmdl == 'lrinv' || cmdl == 'lrlu';
+    return cmdl == 'lrinv' || cmdl == 'lrlu' || cmdl == 'lrdet';
 };
 
 module.exports.deal = function(req, cmd, callback) {

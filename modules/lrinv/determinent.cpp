@@ -73,7 +73,7 @@ void frprint(frac x)
         cout << x.up;
 }
 frac coef[MAXN][MAXN];
-int n;
+int n, cntSwap;
     void print_matrix()
     {
         for(int i = 0;i < n; i++)
@@ -99,6 +99,7 @@ int n;
     {
         int i, j;
         bool flag = true;
+		cntSwap = 1;
         for(i = 0; i < n - 1; ++i)
         if(flag)
         {
@@ -114,6 +115,7 @@ int n;
                     flag = true;
                     break;
                 }
+				cntSwap *= -1;
             }
             //cout << "safe" << endl;
             if(coef[i][i].up == 0) return false;
@@ -185,7 +187,7 @@ int main()
     if(Gauss_elimination())
     {
         frac ans;
-        ans.up = 1; ans.down = 1;
+        ans.up = cntSwap; ans.down = 1;
         for(int i = 0; i < n; i++)
             ans = ans * coef[i][i];
         frprint(ans);
