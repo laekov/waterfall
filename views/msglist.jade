@@ -1,0 +1,12 @@
+extends layout
+block content
+	p
+		span= data.length
+		span in cargo
+	ul
+		- for (var i in data) {
+			li
+				p= data[i].text
+				p
+					small= Date(data[i].date).toLocaleString()
+		- }
