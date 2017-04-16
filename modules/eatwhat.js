@@ -3,7 +3,7 @@ module.exports.own = function(cmdl) {
     return cmdl === 'eatwhat' || cmdl === 'eatadd' || cmdl === 'eatlist';
 };
 
-module.exports.dealWithCmd = function(req, cmds, callback) {
+module.exports.deal = function(req, cmds, callback) {
     if (cmds[0] === 'eatwhat') {
         var tot = 0;
         for (var i in halls) {
