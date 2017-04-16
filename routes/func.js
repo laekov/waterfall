@@ -10,6 +10,7 @@ var cmdList = [
 	require('../modules/refer'),
 	require('../modules/lrinv'),
 	require('../modules/oldhl'),
+	require('../modules/eatwhat'),
 ];
 
 router.post('/wechat/get', function(req, res) {
